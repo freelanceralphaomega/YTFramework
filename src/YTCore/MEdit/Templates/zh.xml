@@ -1,0 +1,8 @@
+<LevelMap>
+  <Level name="abcde">
+    <LayerData>
+      <Layer name="Layer 58">(gs_a26{static|image|$a2109},x=504.3,y=417.15,scaleX=0.9996732026143789,scaleY=1.2296969628491368,rotation=180,name=0.5404468108899891,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_a26{static|image|$a2110},x=470,y=234.25,scaleX=1,scaleY=1.212162162162162,rotation=0,name=0.8845780123956501,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_a26{static|image|$a2111},x=630,y=372.9,scaleX=1.1270962762804373,scaleY=1.9004810875612146,rotation=90,name=0.4686021311208606,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_a26{static|image|$a2112},x=347.1,y=278.65,scaleX=1.0934640522875818,scaleY=1.9004810875612146,rotation=-90,name=0.2830954072996974,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)</Layer>
+    </LayerData>
+    <jointInfo/>
+  </Level>
+</LevelMap>

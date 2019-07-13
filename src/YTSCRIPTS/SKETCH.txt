@@ -1,0 +1,27 @@
+
+CONTEXT:SKETCH
+[
+
+dispatch:;
+id:c0;
+listen:;
+exe:(1,a0);
+properties:(x:0);
+
+
+<act: a0>
+move: 0,0;
+#predefined_shape:MERILYN_MONROE;#
+shape:(0,0),(400,400),(800,400),(800,300),(0,0)|(400,400),(800,400),(800,800),(400,400);
+shape_color:(0xFF0000),(0x0000FF),(0xFF0000),(0x0000FF),(0xFF0000),(0x0000FF);
+shape_alpha:(.2),(.5);
+border_color:0x000000;
+border_width:3;
+drawTime:8;
+
+
+mainDivCol:0xCC0000;
+<end:true>
+
+
+]

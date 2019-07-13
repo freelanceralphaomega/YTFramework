@@ -1,0 +1,8 @@
+<LevelMap>
+  <Level name="abcd">
+    <LayerData>
+      <Layer name="Layer 49">(gate{static|anim|E10_0|destiny},x=432,y=273.3,scaleX=0.29071834853388256,scaleY=0.297029702970297,rotation=90,name=0.992018673568964,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=4,isBullet=undefined)(gate{static|anim|E10_13|destiny},x=431.4,y=394.25,scaleX=0.29071834853388256,scaleY=0.297029702970297,rotation=180,name=0.609640521928668,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=4,isBullet=undefined)(blackM{dynamic|image|E9_0},x=377.4,y=339.95,scaleX=1,scaleY=1,rotation=0,name=0.34452382382005453,density=1,restitution=0.1,friction=0,maskBit=undefined,groupBit=undefined,isBullet=undefined)(blackM{dynamic|image|E9_21},x=341.5,y=308.6,scaleX=1,scaleY=1,rotation=0,name=0.900151614099741,density=1,restitution=0.1,friction=0,maskBit=undefined,groupBit=undefined,isBullet=undefined)</Layer>
+    </LayerData>
+    <jointInfo/>
+  </Level>
+</LevelMap>

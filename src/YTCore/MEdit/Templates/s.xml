@@ -1,0 +1,8 @@
+<LevelMap>
+  <Level name="abcd">
+    <LayerData>
+      <Layer name="Layer 22">(gs_c35{static|image|$a771},x=394.7,y=250.7,scaleX=1,scaleY=1,rotation=-2.377265343601443,name=0.7419386291876435,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_c35{static|image|$a772},x=678.65,y=554.7,scaleX=1,scaleY=1,rotation=177.4337435658844,name=0.5962243843823671,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)</Layer>
+    </LayerData>
+    <jointInfo/>
+  </Level>
+</LevelMap>

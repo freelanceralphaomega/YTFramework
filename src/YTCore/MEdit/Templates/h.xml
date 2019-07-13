@@ -1,0 +1,54 @@
+<LevelMap>
+  <Level name="abcd">
+    <LayerData>
+      <Layer name="Layer 85">(gs_a17{dynamic|image|$a248},x=281.35,y=309.5,scaleX=0.21205676772397983,scaleY=0.24790083367864263,rotation=0,name=0.5326718566939235,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_a17{dynamic|image|$a249},x=281.3,y=358.65,scaleX=0.21205676772397983,scaleY=0.24790083367864263,rotation=0,name=0.45787939010187984,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a17{dynamic|image|$a274},x=281.85,y=207,scaleX=0.21205676772397983,scaleY=0.24790083367864263,rotation=0,name=0.5326718566939235,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a17{dynamic|image|$a275},x=281.8,y=256.15,scaleX=0.21205676772397983,scaleY=0.24790083367864263,rotation=0,name=0.45787939010187984,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)</Layer>
+    </LayerData>
+    <jointInfo>
+      <joint>
+        <anchorAy>1.5245901271236522</anchorAy>
+        <anchorBy>54.860454493083616</anchorBy>
+        <speed>0</speed>
+        <torque>0</torque>
+        <bodyA>$a248</bodyA>
+        <bodyB>$a275</bodyB>
+        <type>revolute</type>
+        <name>$a248$275</name>
+        <enabled>false</enabled>
+        <anchorBx>6.8600364358707475</anchorBx>
+        <anchorAx>7.326561324863502</anchorAx>
+        <lowerAngle/>
+        <upperAngle/>
+      </joint>
+      <joint>
+        <anchorAy>50.5345849453913</anchorAy>
+        <anchorBy>360</anchorBy>
+        <speed>0</speed>
+        <torque>0</torque>
+        <bodyA>$a248</bodyA>
+        <bodyB>$a249</bodyB>
+        <type>revolute</type>
+        <name>$a248$249</name>
+        <enabled>false</enabled>
+        <anchorBx>288.65</anchorBx>
+        <anchorAx>7.326561324863502</anchorAx>
+        <lowerAngle/>
+        <upperAngle/>
+      </joint>
+      <joint>
+        <anchorAy>50.46021469528771</anchorAy>
+        <anchorBy>1.3262694601807379</anchorBy>
+        <speed>0</speed>
+        <torque>0</torque>
+        <bodyA>$a274</bodyA>
+        <bodyB>$a275</bodyB>
+        <type>revolute</type>
+        <name>$a274$249</name>
+        <enabled>false</enabled>
+        <anchorBx>7.400781193566896</anchorBx>
+        <anchorAx>7.337164163249702</anchorAx>
+        <lowerAngle/>
+        <upperAngle/>
+      </joint>
+    </jointInfo>
+  </Level>
+</LevelMap>

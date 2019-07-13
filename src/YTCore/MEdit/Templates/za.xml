@@ -1,0 +1,8 @@
+<LevelMap>
+  <Level name="abcd">
+    <LayerData>
+      <Layer name="Layer 47">(gate{dynamic|anim|E10_55|destiny},x=494.7,y=205.3,scaleX=0.18443023894251412,scaleY=0.296039603960396,rotation=180,name=0.609640521928668,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=4,isBullet=undefined)(blackM{dynamic|image|E9_28},x=460.05,y=308,scaleX=1,scaleY=1,rotation=0,name=0.34452382382005453,density=1,restitution=0.1,friction=0,maskBit=undefined,groupBit=undefined,isBullet=undefined)(gate{dynamic|anim|E10_56|destiny},x=493.35,y=454.6,scaleX=0.18443023894251412,scaleY=0.296039603960396,rotation=180,name=0.1433406719006598,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=4,isBullet=undefined)(gs_a9{static|image|$a1820},x=478.7,y=193.1,scaleX=0.4488645467085085,scaleY=0.35884788447803223,rotation=0,name=0.775491142179817,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a9{static|image|$a1821},x=418.7,y=190.5,scaleX=0.4488195067969984,scaleY=0.36222869250013245,rotation=0,name=0.3078758353367448,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(blackM{dynamic|image|E9_29},x=460.05,y=361.3,scaleX=1,scaleY=1,rotation=0,name=0.8228312521241605,density=1,restitution=0.1,friction=0,maskBit=undefined,groupBit=undefined,isBullet=undefined)</Layer>
+    </LayerData>
+    <jointInfo/>
+  </Level>
+</LevelMap>

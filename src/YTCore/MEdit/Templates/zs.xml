@@ -1,0 +1,8 @@
+<LevelMap>
+  <Level name="abc">
+    <LayerData>
+      <Layer name="Layer 22">(gs_a27{static|image|$a2156},x=408.9,y=281.1,scaleX=1,scaleY=1,rotation=0,name=0.04392779665067792,density=1,restitution=NaN,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a27{static|image|$a2157},x=376.65,y=558.9,scaleX=1,scaleY=1,rotation=-180,name=0.765955216716975,density=1,restitution=NaN,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_a27{static|image|$a2158},x=232.2,y=281.1,scaleX=1,scaleY=1,rotation=0,name=0.30699713062494993,density=1,restitution=NaN,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a27{static|image|$a2159},x=598.05,y=558.95,scaleX=1,scaleY=1,rotation=-180,name=0.0029071010649204254,density=1,restitution=NaN,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a24{static|image|$a2160},x=303.3,y=418.9,scaleX=1,scaleY=1,rotation=0,name=0.07132942415773869,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_a24{static|image|$a2161},x=383.35,y=340,scaleX=1,scaleY=1,rotation=0,name=0.24909173883497715,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a17{static|image|$a2162},x=593.35,y=340,scaleX=0.3809995559995559,scaleY=1,rotation=0,name=0.07450162712484598,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_a17{static|image|$a2163},x=174.4,y=340,scaleX=0.3809995559995559,scaleY=1,rotation=0,name=0.26478454237803817,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)</Layer>
+    </LayerData>
+    <jointInfo/>
+  </Level>
+</LevelMap>

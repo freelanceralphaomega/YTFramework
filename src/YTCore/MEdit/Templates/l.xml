@@ -1,0 +1,8 @@
+<LevelMap>
+  <Level name="abcd">
+    <LayerData>
+      <Layer name="Layer 114">(gs_a17{static|image|$a451},x=413.25,y=220.2,scaleX=0.26916221033868104,scaleY=1.0233875978314877,rotation=0,name=0.5327422032132745,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_a27{static|image|$a452},x=329.3,y=434.65,scaleX=1,scaleY=1,rotation=0,name=0.8742624195292592,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_a27{static|image|$a453},x=516,y=230.65,scaleX=1,scaleY=1,rotation=180,name=0.3999587153084576,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)</Layer>
+    </LayerData>
+    <jointInfo/>
+  </Level>
+</LevelMap>

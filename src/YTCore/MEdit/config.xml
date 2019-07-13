@@ -1,0 +1,12 @@
+<Configuration>
+<Lib>
+<LibPath>LibraryAssets.swf</LibPath>>
+</Lib>
+
+<LibElement>
+<Element>GG1</Element>
+<Element>DD1</Element>
+<Element>DD2</Element>
+</LibElement>
+
+</Configuration>

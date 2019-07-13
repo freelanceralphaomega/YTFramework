@@ -1,0 +1,24 @@
+<LevelMap>
+  <Level name="abcde">
+    <LayerData>
+      <Layer name="Layer 1">(gs_c27{static|image|$a321},x=339,y=291,scaleX=1,scaleY=1,rotation=0,name=0.1962227327749133,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_c27{static|image|$a322},x=595,y=144,scaleX=1,scaleY=1,rotation=90,name=0.08036557165905833,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_c27{static|image|$a323},x=275,y=332,scaleX=1,scaleY=1,rotation=-90,name=0.3164084302261472,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_c27{static|image|$a324},x=529,y=184,scaleX=1,scaleY=1,rotation=-180,name=0.7306039701215923,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_c9{static|image|$a327},x=632,y=426,scaleX=0.6086956521739131,scaleY=0.47170274118550926,rotation=90,name=0.31512756552547216,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_c9{static|image|$a328},x=616,y=52.95,scaleX=0.6086956521739131,scaleY=0.536339211932149,rotation=0,name=0.7263201428577304,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_c9{static|image|$a329},x=225.95,y=52,scaleX=0.6086956521739131,scaleY=0.536339211932149,rotation=0,name=0.547587176784873,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(blueDest{static|anim|E6_7|destiny},x=267,y=46,scaleX=1,scaleY=1,rotation=0,name=0.5476349387317896,density=1,restitution=0.1,friction=0.5,maskBit=6,groupBit=2,isBullet=undefined)(redDest{static|anim|E2_10|destiny},x=482,y=322,scaleX=1,scaleY=1,rotation=0,name=0.9879898186773062,density=1,restitution=0.1,friction=0.5,maskBit=6,groupBit=2,isBullet=undefined)(greenDest{static|anim|E4_9|destiny},x=274,y=320,scaleX=1,scaleY=1,rotation=0,name=0.3810750222764909,density=1,restitution=0.1,friction=0.5,maskBit=6,groupBit=2,isBullet=undefined)(gs_c9{static|image|$a330},x=587,y=41,scaleX=0.6086956521739131,scaleY=0.48012629249941235,rotation=90,name=0.4066855418495834,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=false)(gs_a17{static|image|$a331},x=496.85,y=104.95,scaleX=0.15154169121588984,scaleY=0.04545454545454544,rotation=0,name=0.14011290483176708,density=1,restitution=1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a15{dynamic|image|$a332},x=468.95,y=78,scaleX=0.46206896551724136,scaleY=0.4482758620689655,rotation=0,name=0.0396414021961391,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)</Layer>
+    </LayerData>
+    <jointInfo>
+      <joint>
+        <anchorBx>34.054482758620686</anchorBx>
+        <speed>5</speed>
+        <bodyA>$a331</bodyA>
+        <anchorAx>6.145015578804332</anchorAx>
+        <bodyB>$a332</bodyB>
+        <type>revolute</type>
+        <name>$a331$348</name>
+        <enabled>false</enabled>
+        <anchorAy>5.052272727272726</anchorAy>
+        <anchorBy>32.00689655172414</anchorBy>
+        <torque>345675435</torque>
+        <lowerAngle/>
+        <upperAngle/>
+      </joint>
+    </jointInfo>
+  </Level>
+</LevelMap>

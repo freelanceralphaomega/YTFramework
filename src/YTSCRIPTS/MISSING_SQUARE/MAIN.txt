@@ -1,0 +1,18 @@
+
+config
+[
+
+canvasWidth = 1920;
+canvasHeight = 1080;
+canvasColor = 0x888888;  
+frameRate = 60;
+renderTime = 10;
+scaleMode=SHOW_ALL;
+]
+
+include
+[
+TEXT_7x7
+]
+
+

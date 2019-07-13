@@ -1,0 +1,97 @@
+
+$t1=1;
+$time=1;
+
+$ang1=360;
+$ang2=240;
+$ang3=60;
+$thickness=100;
+$radius=200;
+
+
+CONTEXT:CIRCLE
+[
+
+dispatch:;
+id:c0;
+listen:;
+exe:($t1,a0),($t1+.1,a1),($t1+.2,a2),($t1,a3);
+
+
+<act: a0>
+
+move: 400,400;
+
+time: $time;
+
+alpha:1;
+
+th:$thickness;
+
+col:0xCC0000;
+
+radius: $radius;
+
+ang: $ang1;
+
+<end:true>
+
+
+<act: a1>
+
+move: 400,400;
+
+time: $time;
+
+alpha:1;
+
+th:$thickness;
+
+col:0x000000;
+
+radius:$radius;
+
+ang: $ang2;
+
+<end:true>
+
+
+
+<act: a2>
+
+move: 400,400;
+
+time: $time;
+
+alpha:1;
+
+th:$thickness;
+
+col:0x0000CC;
+
+radius:$radius;
+
+ang: $ang3;
+
+<end:true>
+
+
+<act: a3>
+
+move: 400,400;
+
+time: $time;
+
+alpha:1;
+
+th:$thickness;
+
+col:0x345678;
+
+radius:$radius/2;
+
+ang: 360;
+
+<end:true>
+
+]

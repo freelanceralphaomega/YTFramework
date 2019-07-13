@@ -1,0 +1,34 @@
+
+$gridDrawTime = 4;
+$gridAnimDelayAfterDrawingComplete=3;
+$grindAnimationTime=3;
+
+$sqWid=130;
+$originX=100;
+$originY=100;
+
+
+
+CONTEXT:GRAPH
+[
+
+dispatch:;
+id:G0;
+listen:;
+exe:(0,a0);
+properties:(x,$originX),(y,7*$sqWid+$originY);
+animation: (property:alpha,time:$grindAnimationTime,initVal:1,finalVal:0,delay:$gridDrawTime+$gridAnimDelayAfterDrawingComplete,fn:linear,params:1|0);
+
+
+<act: a0>
+move: 0,0;
+width:$sqWid*7;
+height:$sqWid*7;
+ppx:$sqWid;
+ppy:$sqWid;
+boundingBoxCol:0x880000;
+drawTime:$gridDrawTime;
+mainDivCol:0xFFFFFF;
+<end:true>
+
+]

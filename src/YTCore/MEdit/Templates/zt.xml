@@ -1,0 +1,39 @@
+<LevelMap>
+  <Level name="abcde">
+    <LayerData>
+      <Layer name="Layer 134">(blueDest{static|anim|E6_85|destiny},x=248.55,y=204.25,scaleX=1,scaleY=1,rotation=0,name=0.5476349387317896,density=1,restitution=0.1,friction=0.5,maskBit=6,groupBit=2,isBullet=undefined)(redDest{dynamic|anim|E2_121|destiny},x=352.8,y=345.7,scaleX=1,scaleY=1,rotation=0,name=0.9879898186773062,density=1,restitution=0.1,friction=0.5,maskBit=6,groupBit=2,isBullet=undefined)(greenDest{dynamic|anim|E4_109|destiny},x=261.45,y=345.7,scaleX=1,scaleY=1,rotation=0,name=0.3810750222764909,density=1,restitution=0.1,friction=0.5,maskBit=6,groupBit=2,isBullet=undefined)</Layer>
+    </LayerData>
+    <jointInfo>
+      <joint>
+        <anchorAx>68.55</anchorAx>
+        <torque>456345455</torque>
+        <bodyB>E4_109</bodyB>
+        <speed>2</speed>
+        <anchorAy>198.65</anchorAy>
+        <bodyA>E6_85</bodyA>
+        <enabled>false</enabled>
+        <type>revolute</type>
+        <name>E6_85E4_109</name>
+        <upperAngle/>
+        <anchorBx>55.7</anchorBx>
+        <lowerAngle/>
+        <anchorBy>57.15</anchorBy>
+      </joint>
+      <joint>
+        <anchorAx>57.3</anchorAx>
+        <torque>456345455</torque>
+        <bodyB>E4_109</bodyB>
+        <speed>2</speed>
+        <anchorAy>57.05</anchorAy>
+        <bodyA>E2_121</bodyA>
+        <enabled>false</enabled>
+        <type>revolute</type>
+        <name>E2_121E4_109</name>
+        <upperAngle/>
+        <anchorBx>148.65</anchorBx>
+        <lowerAngle/>
+        <anchorBy>57.05</anchorBy>
+      </joint>
+    </jointInfo>
+  </Level>
+</LevelMap>

@@ -1,0 +1,8 @@
+<LevelMap>
+  <Level name="abcd">
+    <LayerData>
+      <Layer name="Layer 13">(ystar{static|image|E14_1},x=427.15,y=308.5,scaleX=1,scaleY=1,rotation=0,name=0.7517895754426718,density=1,restitution=0,friction=0,maskBit=2,groupBit=2,isBullet=false)(ystar{static|image|E14_4},x=482.85,y=344.3,scaleX=1,scaleY=1,rotation=0,name=0.267699156422168,density=1,restitution=0,friction=0,maskBit=2,groupBit=2,isBullet=undefined)(ystar{static|image|E14_5},x=534.3,y=241.4,scaleX=1,scaleY=1,rotation=0,name=0.1645109890960157,density=1,restitution=0,friction=0,maskBit=2,groupBit=2,isBullet=undefined)(ystar{static|image|E14_6},x=552.85,y=312.85,scaleX=1,scaleY=1,rotation=0,name=0.8109577451832592,density=1,restitution=0,friction=0,maskBit=2,groupBit=2,isBullet=undefined)(ystar{static|image|E14_7},x=461.4,y=235.7,scaleX=1,scaleY=1,rotation=0,name=0.44699891889467835,density=1,restitution=0,friction=0,maskBit=2,groupBit=2,isBullet=undefined)</Layer>
+    </LayerData>
+    <jointInfo/>
+  </Level>
+</LevelMap>

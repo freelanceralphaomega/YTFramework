@@ -1,0 +1,53 @@
+$drawStartTime=0;
+
+$animDelay = 3;
+
+$bordCol=0x666666;
+
+$q=2;
+$d=1;
+
+$animT=1;
+
+$tA = 1;
+$tB = 3;
+$tC = 3;
+$tD = 3;
+$tE = 3;
+
+
+$sqWid=130;
+$originX=100;
+$originY=100;
+$pt = 6.14285714285;
+$fr = 0.14285714285;
+$fr1 = 1.14285714285;
+
+
+
+
+
+CONTEXT:SKETCH
+[
+
+dispatch:;
+id:MID;
+listen:;
+exe:(20,a0);
+properties:(x,$originX+3*$sqWid),(y,$originY+3*$sqWid-$sqWid*$fr);
+
+
+<act: a0>
+move: 0,0;
+shape:(0,0),($sqWid,0),($sqWid,$sqWid),(0,$sqWid),(0,0);
+shape_color:(0xABCDEF);
+shape_alpha:(1);
+border_color:$bordCol;
+border_width:.1;
+drawTime:3;
+
+
+mainDivCol:0xCC0000;
+<end:true>
+
+]

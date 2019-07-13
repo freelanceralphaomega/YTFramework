@@ -1,0 +1,39 @@
+<LevelMap>
+  <Level name="P1I00">
+    <LayerData>
+      <Layer name="Layer 3">(gs_a3{static|image|$a885},x=347,y=103,scaleX=1,scaleY=1,rotation=0,name=0.4353871555067599,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=4,isBullet=false)(gs_a3{static|image|$a886},x=345.55,y=261.1,scaleX=1,scaleY=1,rotation=0,name=0.09147232491523027,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=4,isBullet=false)(gs_a3{static|image|$a891},x=340,y=397,scaleX=1,scaleY=1,rotation=0,name=0.6011599632911384,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=4,isBullet=false)(gs_a17{static|image|$a899},x=369.9,y=107.7,scaleX=0.39325068870523416,scaleY=0.09113636363636363,rotation=0,name=0.14011290483176708,density=1,restitution=1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a15{dynamic|image|$a900},x=307.8,y=38.85,scaleX=1,scaleY=1,rotation=0,name=0.0396414021961391,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=4,isBullet=false)(gs_a17{static|image|$a902},x=522,y=103.3,scaleX=0.39325068870523416,scaleY=0.09113636363636363,rotation=0,name=0.14011290483176708,density=1,restitution=1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a15{dynamic|image|$a903},x=473.3,y=38.9,scaleX=1,scaleY=1,rotation=0,name=0.0396414021961391,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=4,isBullet=false)</Layer>
+    </LayerData>
+    <jointInfo>
+      <joint>
+        <anchorAx>11.28629476584022</anchorAx>
+        <bodyA>$a899</bodyA>
+        <bodyB>$a900</bodyB>
+        <speed>5</speed>
+        <anchorAy>5.609443181818181</anchorAy>
+        <anchorBy>74.5</anchorBy>
+        <enabled>false</enabled>
+        <type>revolute</type>
+        <name>$a899$348</name>
+        <torque>345675435</torque>
+        <upperAngle/>
+        <anchorBx>73.4</anchorBx>
+        <lowerAngle/>
+      </joint>
+      <joint>
+        <anchorAx>23.555716253443524</anchorAx>
+        <bodyA>$a902</bodyA>
+        <bodyB>$a903</bodyB>
+        <speed>-5</speed>
+        <anchorAy>7.837727272727272</anchorAy>
+        <anchorBy>72.2</anchorBy>
+        <enabled>false</enabled>
+        <type>revolute</type>
+        <name>$a902$348</name>
+        <torque>345675435</torque>
+        <upperAngle/>
+        <anchorBx>72.3</anchorBx>
+        <lowerAngle/>
+      </joint>
+    </jointInfo>
+  </Level>
+</LevelMap>

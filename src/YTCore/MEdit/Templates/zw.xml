@@ -1,0 +1,39 @@
+<LevelMap>
+  <Level name="abcde">
+    <LayerData>
+      <Layer name="Layer 2">(gs_b16{dynamic|image|$c},x=553.95,y=181,scaleX=1.5,scaleY=1.5,rotation=0,name=0.2284156265668571,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=4,isBullet=false)(gs_a24{static|image|$o},x=650,y=275,scaleX=0.2631578947368421,scaleY=0.33333333333333326,rotation=0,name=0.4458781508728862,density=1,restitution=1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a16{dynamic|image|$b},x=580,y=209,scaleX=1.161764705882353,scaleY=1.1014899380804954,rotation=0,name=0.09811203647404909,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=4,isBullet=false)</Layer>
+    </LayerData>
+    <jointInfo>
+      <joint>
+        <anchorBx>108.07499999999999</anchorBx>
+        <speed>-4</speed>
+        <bodyA>$o</bodyA>
+        <anchorAx>12</anchorAx>
+        <bodyB>$c</bodyB>
+        <type>revolute</type>
+        <name>$o$c</name>
+        <enabled>false</enabled>
+        <anchorAy>12.999999999999996</anchorAy>
+        <anchorBy>107.02499999999999</anchorBy>
+        <torque>23454234</torque>
+        <lowerAngle/>
+        <upperAngle/>
+      </joint>
+      <joint>
+        <anchorBx>80.97500000000001</anchorBx>
+        <speed>4</speed>
+        <bodyA>$o</bodyA>
+        <anchorAx>10.999999999999998</anchorAx>
+        <bodyB>$b</bodyB>
+        <type>revolute</type>
+        <name>$o$b</name>
+        <enabled>false</enabled>
+        <anchorAy>11.999999999999996</anchorAy>
+        <anchorBy>77.98548761609908</anchorBy>
+        <torque>23454234</torque>
+        <lowerAngle/>
+        <upperAngle/>
+      </joint>
+    </jointInfo>
+  </Level>
+</LevelMap>

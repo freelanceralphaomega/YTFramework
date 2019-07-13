@@ -1,0 +1,5 @@
+<PhysicsProfile>
+  <Element name="F2_I">
+    <ShapeInfo>[[[63.4,0.3],[153.55,0.3],[91.2,359.55],[0.45,359.7],[63.25,0.6]]]</ShapeInfo>
+  </Element>
+</PhysicsProfile>

@@ -1,0 +1,166 @@
+
+
+
+$drawStartTime=3;
+
+$animDelay = 3;
+
+
+$tA = 3;
+$tB = 3;
+$tC = 3;
+$tD = 3;
+$tE = 3;
+
+
+$sqWid=130;
+$originX=100;
+$originY=100;
+$pt = 6.14285714285;
+$fr = 0.14285714285;
+$fr1 = 1.14285714285;
+
+
+
+
+CONTEXT:SKETCH
+[
+
+dispatch:;
+id:A;
+listen:;
+exe:($drawStartTime,a0);
+properties:(x,$originX),(y,$originY);
+animation: (property:y,time:$tA,initVal:$originY,finalVal:$originY+$sqWid-$sqWid*$fr,delay:$animDelay+$drawStartTime+$tA+$tB+$tC+$tD+$tE,fn:linear,params:1|0);
+
+<act: a0>
+move: 0,0;
+shape:(0,0),(3*$sqWid,0),(3*$sqWid,$sqWid),(0,$sqWid),(0,0);
+shape_color:(0xFF0000);
+shape_alpha:(.6);
+border_color:0x000000;
+border_width:.1;
+drawTime:$tA;
+
+
+mainDivCol:0xCC0000;
+<end:true>
+
+]
+
+
+CONTEXT:SKETCH
+[
+
+dispatch:;
+id:B;
+listen:;
+exe:($drawStartTime+$tA,a1);
+properties:(x,$originX),(y,$originY);
+animation: (property:x,time:$tB,initVal:$originX,finalVal:$originX-3*$sqWid,delay:$animDelay+$drawStartTime+$tA+$tB+$tC+$tD+$tE,fn:linear,params:1|0);
+animation: (property:y,time:$tB,initVal:$originY,finalVal:$originY-$sqWid*$fr,delay:$animDelay+$drawStartTime+$tA+$tB+$tC+$tD+$tE,fn:linear,params:1|0);
+
+
+<act: a1>
+move: 0,0;
+shape:(3*$sqWid,0),(7*$sqWid,0),(7*$sqWid,3*$sqWid),(6*$sqWid,3*$sqWid),(6*$sqWid,$sqWid),(3*$sqWid,$sqWid),(3*$sqWid,0);
+shape_color:(0xFFFF00);
+shape_alpha:(.6);
+border_color:0x000000;
+border_width:.1;
+drawTime:$tB;
+
+
+mainDivCol:0xCC0000;
+<end:true>
+
+
+]
+
+CONTEXT:SKETCH
+[
+
+dispatch:;
+id:C;
+listen:;
+exe:($drawStartTime+$tA+$tB,a2);
+properties:(x,$originX),(y,$originY);
+animation: (property:x,time:$tC,initVal:$originX,finalVal:$originX+4*$sqWid,delay:$animDelay+$drawStartTime+$tA+$tB+$tC+$tD+$tE,fn:linear,params:1|0);
+animation: (property:y,time:$tC,initVal:$originY,finalVal:$originY-$sqWid*$fr1,delay:$animDelay+$drawStartTime+$tA+$tB+$tC+$tD+$tE,fn:linear,params:1|0);
+
+<act: a2>
+move: 0,0;
+shape:(0,1*$sqWid),(3*$sqWid,1*$sqWid),(3*$sqWid,$pt*$sqWid),(0,7*$sqWid),(0,1*$sqWid);
+shape_color:(0xCC2267);
+shape_alpha:(.6);
+border_color:0x000000;
+border_width:.1;
+drawTime:$tC;
+
+
+mainDivCol:0xCC0000;
+<end:true>
+
+
+]
+
+
+CONTEXT:SKETCH
+[
+
+dispatch:;
+id:D;
+listen:;
+exe:($drawStartTime+$tA+$tB+$tC,a2);
+properties:(x,$originX),(y,$originY);
+
+
+
+animation: (property:x,time:$tD,initVal:$originX,finalVal:$originX-3*$sqWid,delay:$animDelay+$drawStartTime+$tA+$tB+$tC+$tD+$tE,fn:linear,params:1|0);
+animation: (property:y,time:$tD,initVal:$originY,finalVal:$originY+$sqWid-$fr*$sqWid,delay:$animDelay+$drawStartTime+$tA+$tB+$tC+$tD+$tE,fn:linear,params:1|0);
+
+
+
+
+<act: a2>
+move: 0,0;
+shape:(3*$sqWid,1*$sqWid),(6*$sqWid,1*$sqWid),(6*$sqWid,3*$sqWid),(7*$sqWid,3*$sqWid),(7*$sqWid,5*$sqWid),(3*$sqWid,$pt*$sqWid),(3*$sqWid,1*$sqWid);
+shape_color:(0xCC00FF);
+shape_alpha:(.6);
+border_color:0x000000;
+border_width:.1;
+drawTime:$tD;
+
+
+mainDivCol:0xCC0000;
+<end:true>
+
+
+]
+
+
+CONTEXT:SKETCH
+[
+
+dispatch:;
+id:E;
+listen:;
+exe:($drawStartTime+$tA+$tB+$tC+$tD,a2);
+properties:(x,$originX),(y,$originY);
+
+
+<act: a2>
+move: 0,0;
+shape:(0,7*$sqWid),(7*$sqWid,5*$sqWid),(7*$sqWid,7*$sqWid),(0,7*$sqWid);
+shape_color:(0x0000FF);
+shape_alpha:(.6);
+border_color:0x000000;
+border_width:.1;
+drawTime:$tE;
+
+
+mainDivCol:0xCC0000;
+<end:true>
+
+
+]

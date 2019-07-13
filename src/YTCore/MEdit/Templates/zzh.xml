@@ -1,0 +1,54 @@
+<LevelMap>
+  <Level name="P1I00">
+    <LayerData>
+      <Layer name="Layer 41">(fire{dynamic|anim|E12_1|destiny},x=466.9,y=219.85,scaleX=1,scaleY=1,rotation=0,name=0.605592975858599,density=1,restitution=1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_c17{dynamic|image|$a1},x=464.05,y=314.15,scaleX=0.39325783789451607,scaleY=1,rotation=0,name=0.8050394891761243,density=1,restitution=1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_c17{dynamic|image|E13_1},x=465.45,y=288.45,scaleX=0.306060606060606,scaleY=0.0911084529505582,rotation=0,name=0.8874674485996366,density=1,restitution=1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_c17{static|image|$a2},x=468.35,y=508.4,scaleX=0.306060606060606,scaleY=0.0911084529505582,rotation=0,name=0.6757662915624678,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)</Layer>
+    </LayerData>
+    <jointInfo>
+      <joint>
+        <speed>0</speed>
+        <bodyA>$a1</bodyA>
+        <bodyB>E13_1</bodyB>
+        <type>revolute</type>
+        <name>$a1E13_1</name>
+        <enabled>false</enabled>
+        <anchorAx>13.07582310999266</anchorAx>
+        <anchorAy>3</anchorAy>
+        <torque>0</torque>
+        <anchorBx>11.69151515151515</anchorBx>
+        <lowerAngle/>
+        <anchorBy>28.6946072567783</anchorBy>
+        <upperAngle/>
+      </joint>
+      <joint>
+        <speed>0</speed>
+        <bodyA>E12_1</bodyA>
+        <bodyB>E13_1</bodyB>
+        <type>revolute</type>
+        <name>E12_1E13_1</name>
+        <enabled>false</enabled>
+        <anchorAx>10.25</anchorAx>
+        <anchorAy>73.05</anchorAy>
+        <torque>0</torque>
+        <anchorBx>11.69151515151515</anchorBx>
+        <lowerAngle/>
+        <anchorBy>4.459758771929824</anchorBy>
+        <upperAngle/>
+      </joint>
+      <joint>
+        <speed>3</speed>
+        <bodyA>$a1</bodyA>
+        <bodyB>$a2</bodyB>
+        <type>revolute</type>
+        <name>$a1$a2</name>
+        <enabled>false</enabled>
+        <anchorAx>13.07582310999266</anchorAx>
+        <anchorAy>208.75</anchorAy>
+        <torque>2345678</torque>
+        <anchorBx>8.845151515151512</anchorBx>
+        <lowerAngle/>
+        <anchorBy>14.540909090909087</anchorBy>
+        <upperAngle/>
+      </joint>
+    </jointInfo>
+  </Level>
+</LevelMap>

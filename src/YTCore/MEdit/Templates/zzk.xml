@@ -1,0 +1,8 @@
+<LevelMap>
+  <Level name="abcd">
+    <LayerData>
+      <Layer name="Layer 83">(bg_1{Inert|image|$a4333},x=-446.2,y=-33.75,scaleX=1,scaleY=1.0745415723380332,rotation=0,name=0.7284801034256816)(gs_c9{static|image|$a4334},x=991.95,y=726.4,scaleX=0.9989130434782608,scaleY=1.2818191101484862,rotation=90,name=0.8248144946992397,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_c9{static|image|$a4335},x=992.3,y=-3.85,scaleX=0.9989130434782608,scaleY=1.2818191101484862,rotation=90,name=0.9597338191233575,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_c9{static|image|$a4336},x=981.6,y=-9,scaleX=0.9989130434782609,scaleY=1.0558157281128726,rotation=0,name=0.42125091375783086,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_c9{static|image|$a4337},x=-3.65,y=-4.15,scaleX=1,scaleY=1.0393721253221029,rotation=0,name=0.041204923298209906,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)</Layer>
+    </LayerData>
+    <jointInfo/>
+  </Level>
+</LevelMap>

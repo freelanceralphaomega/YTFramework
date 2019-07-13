@@ -1,0 +1,5 @@
+<PhysicsProfile>
+  <Element name="F2_L">
+    <ShapeInfo>[[[62.9,0.15],[0,359.9],[228.6,359.7],[242.1,282.1],[105.1,281.4],[153.6,0.15],[63.1,0.15]]]</ShapeInfo>
+  </Element>
+</PhysicsProfile>

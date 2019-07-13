@@ -1,0 +1,41 @@
+
+$t=0;
+
+context:TEXT
+[
+
+dispatch:;
+id:ptcon1;
+listen:;
+exe:($t,A0);
+properties:(x,50),(y,50),(alpha,1),(rotation,0);
+
+
+
+<act: A0>
+
+move: 0,0;
+
+COLORS: (0xFF0000),(0xFFFF00),(0xFF0000),(0x00CC00);
+
+text:We love our country;
+
+font:Vijaya;
+time: 1;
+size:5;
+wordspace:3;
+
+isbitmap:true;
+
+wavescale:.5;	
+
+#---------------------------------STYLE MUST BE DECLARED AT THE END-----------------------------------#
+style:DTEXT;
+
+<end:true>
+
+
+
+
+
+]

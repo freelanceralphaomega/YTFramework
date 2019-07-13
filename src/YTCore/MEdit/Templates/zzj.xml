@@ -1,0 +1,8 @@
+<LevelMap>
+  <Level name="ABCD">
+    <LayerData>
+      <Layer name="Layer 80">(bg_1{Inert|image|$a3933},x=-252.9,y=0,scaleX=1,scaleY=1,rotation=0,name=0.9550228845328093)(gs_a9{static|image|$a3934},x=-2.55,y=8.9,scaleX=1,scaleY=1.0499980766370256,rotation=0,name=0.09290554607287049,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a9{static|image|$a3935},x=984.2,y=6.2,scaleX=1,scaleY=1.0499980766370256,rotation=0,name=0.44018982723355293,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a9{static|image|$a3936},x=987.45,y=3.75,scaleX=0.9989130434782608,scaleY=1.2868871583057129,rotation=90,name=0.6739047137089074,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)(gs_a9{static|image|$a3937},x=987.5,y=735.55,scaleX=0.9989130434782608,scaleY=1.2868871583057129,rotation=90,name=0.2569933165796101,density=1,restitution=0.1,friction=0.5,maskBit=2,groupBit=2,isBullet=undefined)</Layer>
+    </LayerData>
+    <jointInfo/>
+  </Level>
+</LevelMap>

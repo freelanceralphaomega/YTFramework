@@ -1,0 +1,26 @@
+<PhysicsProfile>
+
+<Element name="Rocket">
+<ShapeInfo>[[[24.45,159.75],[20.55,159.45],[21.15,84.45],[24.45,84.45]],[[26.1,29.7],[26.95,84.7],[5,84.7],[5.3,29.7]],[[18.85,0.3],[30.85,29.45],[-0.85,29.75],[11.65,0.55]]]</ShapeInfo>
+</Element>
+
+
+<Element name="TileGround">
+<ShapeInfo>[[[0,0],[1024,0],[1024,100],[0,100]]]</ShapeInfo>
+</Element>
+
+<Element name="Gnd1">
+<ShapeInfo>[[[-1,68],[0,0],[551,0],[550,67]]]</ShapeInfo>
+</Element>
+
+<Element name="slide">
+<ShapeInfo></ShapeInfo>
+</Element>
+
+<Element name="Circ1">
+<ShapeInfo>circ</ShapeInfo>
+</Element>
+
+
+
+</PhysicsProfile>

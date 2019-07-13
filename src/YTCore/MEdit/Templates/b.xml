@@ -1,0 +1,8 @@
+<LevelMap>
+  <Level name="abcd">
+    <LayerData>
+      <Layer name="Layer 11">(blueDest{static|anim|E6_2|destiny},x=445.3,y=209.3,scaleX=1,scaleY=1,rotation=0,name=0.5476349387317896,density=1,restitution=0.1,friction=0.5,maskBit=6,groupBit=2,isBullet=undefined)(redDest{static|anim|E2_2|destiny},x=533.35,y=213.35,scaleX=1,scaleY=1,rotation=0,name=0.9879898186773062,density=1,restitution=0.1,friction=0.5,maskBit=6,groupBit=2,isBullet=undefined)(greenDest{static|anim|E4_2|destiny},x=489.35,y=285.35,scaleX=1,scaleY=1,rotation=0,name=0.3810750222764909,density=1,restitution=0.1,friction=0.5,maskBit=6,groupBit=2,isBullet=undefined)(blueM{dynamic|image|E5_0},x=480,y=325.35,scaleX=1,scaleY=1,rotation=0,name=0.7441679113544524,density=1,restitution=0.1,friction=0,maskBit=6,groupBit=2,isBullet=undefined)(redM{dynamic|image|E1_0},x=604,y=326.65,scaleX=1,scaleY=1,rotation=0,name=0.9695948865264654,density=1,restitution=0.1,friction=0,maskBit=6,groupBit=2,isBullet=undefined)(greenM{dynamic|image|E3_0},x=546.7,y=230.6,scaleX=1,scaleY=1,rotation=0,name=0.188870495185256,density=1,restitution=0.1,friction=0,maskBit=6,groupBit=2,isBullet=undefined)</Layer>
+    </LayerData>
+    <jointInfo/>
+  </Level>
+</LevelMap>
