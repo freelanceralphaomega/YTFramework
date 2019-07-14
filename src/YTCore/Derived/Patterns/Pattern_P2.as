@@ -1,4 +1,4 @@
-package YTCore.Derived.Patterns 
+﻿package YTCore.Derived.Patterns 
 {
 	import YTCore.Abstract.Math.COMMON.MathHandler;
 	import YTCore.Abstract.Math.PatternGenerators;
@@ -60,7 +60,7 @@ package YTCore.Derived.Patterns
 			//ptCon.scaleX = d * 1.01;
 			//ptCon.alpha = 1-d * (1 / 20);                
 			ptCon.x =1920 /2;
-			ptCon.y = 1080/2;+ 
+			ptCon.y = 1080/2;
 			addChild(ptCon);
 			
 			animArr.push([ptCon, 1.5+2*Math.random()]);
