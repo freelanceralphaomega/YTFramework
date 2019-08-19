@@ -14,7 +14,7 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'6/10/2019'</value>
+      <value>'8/9/2019'</value>
     </define>
     <define append="true">
       <name>CONFIG::air</name>
@@ -30,18 +30,18 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>F:\Sushil\Work&amp;Code\YTFramework\src</path-element>
+      <path-element>E:\Development\YTFramework\src</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
     <library-path append="true">
-      <path-element>F:\Sushil\Work&amp;Code\YTFramework\src\YTCore\Libs\spiderLib.swc</path-element>
-      <path-element>F:\Sushil\Work&amp;Code\YTFramework\src\YTCore\Libs\GraphicLib.swc</path-element>
-      <path-element>F:\Sushil\Work&amp;Code\YTFramework\src\YTCore\Libs\TextureLib.swc</path-element>
-      <path-element>F:\Sushil\Work&amp;Code\YTFramework\src\YTCore\Libs\EffectPresets.swc</path-element>
+      <path-element>E:\Development\YTFramework\src\YTCore\Libs\spiderLib.swc</path-element>
+      <path-element>E:\Development\YTFramework\src\YTCore\Libs\GraphicLib.swc</path-element>
+      <path-element>E:\Development\YTFramework\src\YTCore\Libs\TextureLib.swc</path-element>
+      <path-element>E:\Development\YTFramework\src\YTCore\Libs\EffectPresets.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>
-    <path-element>F:\Sushil\Work&amp;Code\YTFramework\src\Main.as</path-element>
+    <path-element>E:\Development\YTFramework\src\Main.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>60</default-frame-rate>
