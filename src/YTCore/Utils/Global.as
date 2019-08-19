@@ -13,6 +13,7 @@ package YTCore.Utils
 		//public static const SCRIPT_PATH:String = "G:/Sushil/Work&Code/YTFramework/src/YTSCRIPTS/";
 		public static var SCRIPT_PATH:String = "F:/Sushil/Work&Code/YTFramework/src/YTSCRIPTS/MISSING_SQUARE/";
 		public static var SHAPE_PATH:String =  "F:/Sushil/Work&Code/YTFramework/src/YTShapes/";
+		public static var TEXT_PATH:String = "C:/Users/Sushil/Desktop/Poems/";
 		
 		public static var RENDER_PATH:String = "E:/YTRendered/";
 		

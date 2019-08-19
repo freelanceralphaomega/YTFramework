@@ -23,6 +23,7 @@ package
 	import YTCore.Components.Text.DAlphabets.DText;
 	import YTCore.Components.Text.DLetter;
 	import YTCore.Components.Text.FontDictionary;
+	import YTCore.Components.Text.MultilineRunningText;
 	import YTCore.Components.Text.RunningText;
 	import YTCore.Components.Text.WavyText;
 	import YTCore.Components.TextLabel;
@@ -113,7 +114,7 @@ package
 		
 		//private var ptCon:ScriptInterpreter;
 		
-		private var ptCon =new Pattern_P2;
+		private var ptCon = new MultilineRunningText("tangled");
 		
 		//private var ptCon:DSketch = new DSketch([[[0,0],[800,0],[800,800],[0,0]]],0xCCCCCC,1,[0xAAAA00],[1],[],!true,.1);
 		

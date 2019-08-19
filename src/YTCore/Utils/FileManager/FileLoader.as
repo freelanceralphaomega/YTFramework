@@ -66,7 +66,19 @@ package YTCore.Utils.FileManager
 		}
 		
 		
-
+       public static function readMLText(fname:String):String
+		{
+			var f:File = new File();
+			f.nativePath = Global.TEXT_PATH + fname+".txt";
+			
+			var fs:FileStream = new FileStream();
+			fs.open(f, FileMode.READ);
+			
+			var s:String = fs.readUTFBytes(fs.bytesAvailable);
+			
+			fs.close();
+			return s;
+		}
 		
 		
 	}
