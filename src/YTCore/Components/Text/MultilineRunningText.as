@@ -13,7 +13,8 @@ package YTCore.Components.Text
 	 */
 	public class MultilineRunningText extends Sprite implements IRenderable 
 	{
-		
+		//private var colArr:Array = [0xFF9933, 0xFFFFFF, 0x138808];
+		private var colArr:Array = [0xFFFFFF,0x138808];
 		private var tlineArr:Array = [];
 		private var rtArr:Array = [];
 		private var seq:Sequencer = new Sequencer();
@@ -37,14 +38,26 @@ package YTCore.Components.Text
 			
 			for (var d:int = 0; d < tlineArr.length; d++)
 			{
-				var rt:RunningText = new RunningText(tlineArr[d], "Arial", 20, [0x000000], .4);
+				//var rt:RunningText = new RunningText(tlineArr[d], "Arial", 20, [colArr[d % colArr.length]], tlineArr[d].length * .11);
+				//var rt:RunningText = new RunningText(tlineArr[d], "Tunga", 25,[getCol(d)], tlineArr[d].length*.11);
+				var rt:RunningText = new RunningText(tlineArr[d], "_sans", 20,[0xCCCCCC], tlineArr[d].length*.11);
 				rtArr.push(rt);
 				rt.y = d * 25;
 				addChild(rt);
 			}
 			
-			Helper.addBackToBackDependency(seq,rtArr);
+			Helper.addBackToBackDependency(seq,rtArr); 
 		
+		}
+		
+		private function getCol(d:int):uint
+		{
+			if (d < tlineArr.length / 3)
+			return colArr[0];
+			if (d < 2 * tlineArr.length / 3-1) 
+			return colArr[1];
+			
+			return colArr[2];
 		}
 		
 		
@@ -54,8 +67,15 @@ package YTCore.Components.Text
 		{
 			if (!canStep)
 			return;
+			try{
 			seq.step();
+			}catch (e:Error)
+			{
+				stop();
+			}
 		}
+		
+		
 		
 		public function stop():void 
 		{

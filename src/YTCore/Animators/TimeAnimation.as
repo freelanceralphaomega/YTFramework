@@ -25,7 +25,7 @@ package YTCore.Animators
 		private var initY:Number;
 		
 		private var spd:Number;
-		private var amplitudeScaling:Number;
+		private var amplitudeScaling:Number;   
 		
 		
 		/**
@@ -44,7 +44,8 @@ package YTCore.Animators
 			totalFrames = time * Global.FRAME_RATE;
 			
 			var stepCount:int = 0;
-			var currentTime:Number = 0;
+			var currentTime:Number = 0;   
+			
 			
 			initX  = obj.x;
 			initY =  obj.y;
@@ -60,10 +61,11 @@ package YTCore.Animators
 			
 			for (var d:int = 0; d < xArr.length; d++ )
 			{
-				unitX.push(xArr[d]/pixelPerUnitX);
+				unitX.push(xArr[d]/pixelPerUnitX); 
 			}
 			
-			yArr = MathHandler.getMappedValues(unitX, xyFn);
+			yArr = MathHandler.getMappedValues(unitX, xyFn); 
+			
 			
 			for (var d:int = 0; d < yArr.length; d++ )
 			{
