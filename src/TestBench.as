@@ -3,6 +3,7 @@ package
 	import YTCore.Abstract.Math.COMMON.MathFunction;
 	import YTCore.Abstract.Math.COMMON.MathHandler;
 	import YTCore.Abstract.Math.COMMON.UtilMathFunction;
+	import YTCore.Animators.ActionSceduler;
 	import YTCore.Animators.PathTraverser;
 	import YTCore.Animators.PropertyChanger;
 	import YTCore.Animators.Sequencer;
@@ -114,7 +115,10 @@ package
 		
 		//private var ptCon:ScriptInterpreter;
 		
-		private var ptCon = new MultilineRunningText("tangled");
+		private var ptCon = new DLine(new Point(200, 200), new Point(1000, 200), 0x440000, 5, 1, 1, true, 1);
+		private var actSch:ActionSceduler = new ActionSceduler(ptCon, "wipeFromHead", 5);
+		
+		//private var ptCon = new MultilineRunningText("tangled");
 		
 		//private var ptCon:DSketch = new DSketch([[[0,0],[800,0],[800,800],[0,0]]],0xCCCCCC,1,[0xAAAA00],[1],[],!true,.1);
 		
@@ -184,7 +188,7 @@ package
 		
 			
 			
-			seq.initSequence([[ptCon,0]]);
+			seq.initSequence([[ptCon,0],[actSch,0]]);
 			
 			stage.addEventListener(KeyboardEvent.KEY_DOWN, onKd);
 			

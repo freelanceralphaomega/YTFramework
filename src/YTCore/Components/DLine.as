@@ -13,6 +13,11 @@ package YTCore.Components  {
 	public class DLine extends Sprite implements IRenderable
 	{
 
+		private var canDeconnectTail:Boolean = false;
+		private var canDeconnectHead:Boolean = false;
+	  private var currentHeadPosition:int = 0;
+	  private var currentTailPosition:int = 0;
+	  private var segmentArr:Array = [];
       private var pointList:Array=[];
 	  private var m:Number;
 	  private var c:Number;
@@ -23,7 +28,7 @@ package YTCore.Components  {
 	  private var currentAlpha:Number;
 	  private var widIncrement:Number = 0;
 	  private var alphaIncrement:Number = 0;
-	  private var lastLineCols:Array = [0x000000, 0xFFFFFF];
+	  private var lastLineCols:Array = [0x000000, 0xFFFFFF]; 
 	  private var lastColIndex:int = 1;
 	  private var segmentPerFrame:Number ;
 	  private var dotted:Boolean = false;
@@ -41,6 +46,7 @@ package YTCore.Components  {
 	  private var holderSpr:Sprite = new Sprite();
 	  
 	  private var segmentSprites:Array = [];
+	  private var numWipePerFrame:int = 1;
 	  
 	  
 	  private var count:int=1;
@@ -71,6 +77,22 @@ package YTCore.Components  {
 			
 			drawLine(from, to, col, time, lWid,lwidEnd, isDotted,initAlpha,endAlpha);
 			
+		}
+		
+		public function wipeFromTail():void
+		{
+			canDeconnectTail = true;
+		}
+		
+		public function set wipeTime(wt:Number):void
+		{
+			var totalFrame:int = int(wt * Global.FRAME_RATE);
+			numWipePerFrame = Math.floor(segmentArr.length / totalFrame);
+		}
+		
+		public function wipeFromHead():void
+		{
+			canDeconnectHead = true;
 		}
 		
 		public function drawLine(from:Point,to:Point,col:uint,speed:Number=5, lWid:Number=1,lwidEnd:Number=-1,isDotted:Boolean=false,initA:Number=1,endA:Number=1):void
@@ -105,6 +127,9 @@ package YTCore.Components  {
 			
 			updateWidth();
 			
+			deconnectHead();
+			deconnectTail();
+			
 			if (!canDoStep)
 			return;
 			
@@ -129,12 +154,50 @@ package YTCore.Components  {
 			return Math.sqrt((pt1.x-pt2.x)*(pt1.x-pt2.x)+(pt1.y-pt2.y)*(pt1.y-pt2.y));
 		}
 		
+		
+		private function deconnectHead():void
+		{
+			if (!canDeconnectTail)
+			return;
+			if (currentTailPosition+currentHeadPosition >= segmentArr.length)
+			{
+				canDoStep = false;
+				canDeconnectHead = false;
+				return;
+			}
+			for (var d:int = 0; d < numWipePerFrame; d++)
+			{
+			segmentArr[segmentArr.length - 1 - currentTailPosition].visible = false;
+			}
+			currentTailPosition++;
+		}
+		
+		private function deconnectTail():void
+		{
+			if (!canDeconnectHead) 
+			return;
+			if (currentTailPosition+currentHeadPosition >= segmentArr.length)
+			{
+				canDoStep = false;
+				canDeconnectTail = false;
+				return;
+			}
+			
+			for (var d:int = 0; d < numWipePerFrame; d++)
+			{
+			segmentArr[currentHeadPosition].visible = false;
+			}
+			currentHeadPosition++;
+		}
+		
+		
 		private function connect(p1:Point,p2:Point,lWid:Number,alp:Number):void
 		{
 			
 			
 			var spr:Sprite = new Sprite();
 			holderSpr.addChild(spr);
+			segmentArr.push(spr);
 			if (mdoBleed)
 			{
 			
@@ -155,7 +218,7 @@ package YTCore.Components  {
 		
 		private function updateWidth():void
 		{
-			for (var d:int = 0; d < ugArr.length; d++ )
+			for (var d:int = 0; d < ugArr.length; d++)
 			{
 				ugArr[d].step();
 			}
