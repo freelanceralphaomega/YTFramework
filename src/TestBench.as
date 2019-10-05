@@ -80,14 +80,14 @@ package
 		
 		
 		
-		//private var ptCon:PointConnector = new PointConnector(MathHandler.getCosPtArr(100/180,50,0,1600,3),0xFFFF00,15,170);
+		//private var ptCon = new PointConnector(MathHandler.getCosPtArr(100/180,50,0,1600,3),0xFFFF00,15,170);
 		//private var ptCon:PointConnector = new PointConnector(MathHandler.getCirclePts(200,-100,100,10,2),0xFFFFFF,10,3);
-		//private var ptCon:PointConnector = new PointConnector([new Point(0, 0), new Point(200, 0),new Point(200, 200),new Point(400,200),new Point(0,0)],0xFFFFFF,2,10);
+		//private var ptCon = new PointConnector([new Point(0, 0), new Point(200, 0),new Point(200, 200),new Point(400,200),new Point(0,0)],0xFFFFFF,2,10);
 		
 		//private var ptCon:DCircleSegment = new DCircleSegment(160, 100, 0xFFFFFF, 5,45);
 		//private var ptCon:DSegment = new DSegment(360, 100, 0xFFFFFF,5,-1);
 		
-		//private var ptCon:PointConnector = new PointConnector(MathHandler.getEllipsePtArr(300 / 5, 300 / 5, -5, 5, 2, 3, 50, 2), 0xCC0000, 10, 10);
+		//private var ptCon = new PointConnector(MathHandler.getEllipsePtArr(300 / 5, 300 / 5, -5, 5, 2, 3, 50, 2), 0xCC0000, 10, 10);
 		//private var ptCon2:PointConnector = new PointConnector(MathHandler.getEllipsePtArr(300/5,300/5,-5,5,2,3,50,2),0xCC0000,10,10);
 		
 		//private var ptCon:GraphPaper = new GraphPaper();
@@ -97,9 +97,11 @@ package
 		//private var ptCon:PointConnector=new PointConnector(Helper.pointsFromArr(LineArt.SUSHIL_SIGNATURE), 0xCCCCCC, 5, 50, 50,[[.5,0]]);
 		
 		//private var ptCon = new PointConnector([new Point(50, 400), new Point(600, 400)], 0xCCCC00, 5, 50, 50,[[.2,100],[.4,30],[.6,0],[.8,0]]);
-		private var ptCon = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,800,5),400/720,160/1),0xFFFF00,5,300,3,[[.3,10],[.6,40],[.8,150]],true,3,0,.05,2,true);
+		//private var ptCon = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,800,5),400/720,160/1),0x000000,5,300,3,[[.3,10],[.6,40],[.8,150]],true,3,0,.05,2,true);
 		//private var ptCon:PointConnector = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,160,3),600/720,500/1),0xCCCC00,3,100,0,[]);
 		//private var ptCon:DLine = new DLine(new Point(0, 0), new Point(400, 0), 0xCC0000, 2, 10, 10, true,1,0,1);
+		
+		private var ptCon = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,360*3,.4),600/720,200/1),0x660000,2,5,5,null)
 		
 		//private var ptCon:DHair = new DHair();
 		
@@ -154,6 +156,7 @@ package
 			ptCon.parent.removeChild(ptCon);
 			ptCon   = new ScriptInterpreter();
 			
+			
 			addChild(ptCon);
 			seq = new Sequencer();
 			seq.initSequence([[ptCon,0]]);
@@ -171,6 +174,7 @@ package
 			
 			
 			ptCon.scaleX = ptCon.scaleY = 1; 
+			ptCon.y = 500;
 			
 
 			/*
