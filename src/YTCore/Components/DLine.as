@@ -47,6 +47,7 @@ package YTCore.Components  {
 	  
 	  private var segmentSprites:Array = [];
 	  private var numWipePerFrame:int = 1;
+	  private var wtim:Number;
 	  
 	  
 	  private var count:int=1;
@@ -60,11 +61,12 @@ package YTCore.Components  {
 		  * @param  lwidEnd width of the line at the ending
           * @param	isDotted If the line is dotted
           */
-		public function DLine(from:Point,to:Point,col:uint,time:Number=5,lWid:Number=1,lwidEnd:Number=-1,doBleed:Boolean=false,bt:Number=1,initAlpha:Number=1,endAlpha:Number=1,isDotted:Boolean=false,texture:Sprite=null) {
+		public function DLine(from:Point,to:Point,col:uint,time:Number=5,lWid:Number=1,lwidEnd:Number=-1,doBleed:Boolean=false,bt:Number=1,initAlpha:Number=1,endAlpha:Number=1,isDotted:Boolean=false,wipeT:Number=1,texture:Sprite=null) {
 			// constructor code
 			
 			mdoBleed = doBleed;
 			bTime = bt;
+			wtim = wipeT;
 			
 			addChild(textureSpr);
 			addChild(holderSpr);
@@ -77,6 +79,13 @@ package YTCore.Components  {
 			
 			drawLine(from, to, col, time, lWid,lwidEnd, isDotted,initAlpha,endAlpha);
 			
+			wipeTime = wtim;
+		}
+		
+		
+		public function get segmentCount():int
+		{
+			return pointList.length - 1;
 		}
 		
 		public function wipeFromTail():void
@@ -86,8 +95,8 @@ package YTCore.Components  {
 		
 		public function set wipeTime(wt:Number):void
 		{
-			var totalFrame:int = int(wt * Global.FRAME_RATE);
-			numWipePerFrame = Math.floor(segmentArr.length / totalFrame);
+			var totalFrame:int = int(wt * Global.FRAME_RATE); 
+			numWipePerFrame = Math.ceil(pointList.length / totalFrame); 
 		}
 		
 		public function wipeFromHead():void
@@ -127,8 +136,7 @@ package YTCore.Components  {
 			
 			updateWidth();
 			
-			deconnectHead();
-			deconnectTail();
+			deconnect();
 			
 			if (!canDoStep)
 			return;
@@ -165,10 +173,9 @@ package YTCore.Components  {
 				canDeconnectHead = false;
 				return;
 			}
-			for (var d:int = 0; d < numWipePerFrame; d++)
-			{
+			
 			segmentArr[segmentArr.length - 1 - currentTailPosition].visible = false;
-			}
+			
 			currentTailPosition++;
 		}
 		
@@ -183,13 +190,21 @@ package YTCore.Components  {
 				return;
 			}
 			
-			for (var d:int = 0; d < numWipePerFrame; d++)
-			{
+			
 			segmentArr[currentHeadPosition].visible = false;
-			}
+			
 			currentHeadPosition++;
 		}
 		
+		
+		private function deconnect():void
+		{
+			for (var d:int = 0; d < numWipePerFrame; d++ )
+			{
+				deconnectTail();
+				deconnectHead();
+			}
+		}
 		
 		private function connect(p1:Point,p2:Point,lWid:Number,alp:Number):void
 		{
@@ -204,7 +219,7 @@ package YTCore.Components  {
 			segmentSprites.push(spr);
 			
 			var ug:UniformGrowth = new UniformGrowth(spr, p1, p2, lineCol, 0, lWid, bTime,alp);
-			ug.start();
+			ug.start(); 
 			
 			ugArr.push(ug);
 			}
@@ -212,7 +227,7 @@ package YTCore.Components  {
 			{
 			spr.graphics.lineStyle(lWid,lineCol,alp);
 			spr.graphics.moveTo(p1.x,p1.y);
-			spr.graphics.lineTo(p2.x, p2.y);
+			spr.graphics.lineTo(p2.x, p2.y);          
 			}
 		}
 		

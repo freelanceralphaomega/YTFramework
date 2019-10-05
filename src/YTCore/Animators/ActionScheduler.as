@@ -1,13 +1,15 @@
 package YTCore.Animators 
 {
+	import YTCore.Events.YTEvent;
 	import YTCore.Interface.IRenderable;
 	import YTCore.Utils.Global;
+	import flash.events.EventDispatcher;
 	
 	/**
 	 * ...
 	 * @author ...
 	 */
-	public class ActionSceduler implements IRenderable 
+	public class ActionScheduler extends EventDispatcher implements IRenderable 
 	{
 		
 		private var canDoStep:Boolean = false;
@@ -24,12 +26,12 @@ package YTCore.Animators
 		 * @param	delayx delay in second after which method is called
 		 */
 		
-		public function ActionSceduler(objx:Object,methodx:String,delayx:Number) 
+		public function ActionScheduler(objx:Object,methodx:String,delayx:Number)
 		{
 			obj = objx;
 			method = methodx;
 			delay = delayx;
-			maxCount = int(Global.FRAME_RATE * delay);
+			maxCount = int(Global.FRAME_RATE * delay); 
 		}
 		
 		
@@ -39,13 +41,14 @@ package YTCore.Animators
 		{
 			if (!canDoStep)
 			return;
-			
-			trace("action..");
+	
 			
 			if (currentCount >= maxCount)
 			{
 				stop();
 				obj[method]();
+				this.dispatchEvent(new YTEvent(YTEvent.FINISHED));  
+				
 			}
 			currentCount++;
 			

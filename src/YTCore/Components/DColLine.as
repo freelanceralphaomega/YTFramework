@@ -35,7 +35,7 @@ package YTCore.Components
 		
 		public function start():void 
 		{
-			canDoStep = true;
+			canDoStep = true; 
 		}
 		
 	}

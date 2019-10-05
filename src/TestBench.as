@@ -3,7 +3,7 @@ package
 	import YTCore.Abstract.Math.COMMON.MathFunction;
 	import YTCore.Abstract.Math.COMMON.MathHandler;
 	import YTCore.Abstract.Math.COMMON.UtilMathFunction;
-	import YTCore.Animators.ActionSceduler;
+	import YTCore.Animators.ActionScheduler;
 	import YTCore.Animators.PathTraverser;
 	import YTCore.Animators.PropertyChanger;
 	import YTCore.Animators.Sequencer;
@@ -96,8 +96,8 @@ package
 		//private var ptCon:LineDrawing = new LineDrawing(LineArt.MAP_OF_INDIA, .5, 0xFFFF00, 3);
 		//private var ptCon:PointConnector=new PointConnector(Helper.pointsFromArr(LineArt.SUSHIL_SIGNATURE), 0xCCCCCC, 5, 50, 50,[[.5,0]]);
 		
-		//private var ptCon:PointConnector = new PointConnector([new Point(50, 400), new Point(600, 400)], 0xCCCC00, 5, 50, 50,[[.2,100],[.4,30],[.6,0],[.8,0]]);
-		//private var ptCon:PointConnector = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,800,5),400/720,160/1),0xFFFF00,5,300,3,[[.3,10],[.6,40],[.8,150]],true,3,0,.05,true);
+		//private var ptCon = new PointConnector([new Point(50, 400), new Point(600, 400)], 0xCCCC00, 5, 50, 50,[[.2,100],[.4,30],[.6,0],[.8,0]]);
+		private var ptCon = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,800,5),400/720,160/1),0xFFFF00,5,300,3,[[.3,10],[.6,40],[.8,150]],true,3,0,.05,2,true);
 		//private var ptCon:PointConnector = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,160,3),600/720,500/1),0xCCCC00,3,100,0,[]);
 		//private var ptCon:DLine = new DLine(new Point(0, 0), new Point(400, 0), 0xCC0000, 2, 10, 10, true,1,0,1);
 		
@@ -115,8 +115,8 @@ package
 		
 		//private var ptCon:ScriptInterpreter;
 		
-		private var ptCon = new DLine(new Point(200, 200), new Point(1000, 200), 0x440000, 5, 1, 1, true, 1);
-		private var actSch:ActionSceduler = new ActionSceduler(ptCon, "wipeFromHead", 5);
+		//private var ptCon = new DLine(new Point(200, 200), new Point(1000, 200), 0x440000, 5, 10, 50, true, 1,1,1,false,1);
+		//private var actSch:ActionScheduler = new ActionScheduler(ptCon, "wipeFromHead", 5); 
 		
 		//private var ptCon = new MultilineRunningText("tangled");
 		
@@ -126,14 +126,12 @@ package
 		
 		//private var ptCon:INTRO_GRAPH = new INTRO_GRAPH();
 		
-		
-	
-	
 
 		
 		public function TestBench() 
 		{
 			super();
+			
 			
 			if (Tester.enabled)
 			{
@@ -166,13 +164,13 @@ package
 		{
 			
 			
-			removeEventListener(Event.ADDED_TO_STAGE, onStg);
+			removeEventListener(Event.ADDED_TO_STAGE, onStg); 
 			
 			addChild(ptCon);
 			
 			
 			
-			ptCon.scaleX = ptCon.scaleY = 1;
+			ptCon.scaleX = ptCon.scaleY = 1; 
 			
 
 			/*
@@ -188,7 +186,8 @@ package
 		
 			
 			
-			seq.initSequence([[ptCon,0],[actSch,0]]);
+			//seq.initSequence([[ptCon,0],[actSch,0]]);
+			seq.initSequence([[ptCon,0]]);
 			
 			stage.addEventListener(KeyboardEvent.KEY_DOWN, onKd);
 			

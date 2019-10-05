@@ -1,6 +1,7 @@
 package YTCore.Components 
 {
 	import YTCore.Abstract.Math.COMMON.MathHandler;
+	import YTCore.Animators.ActionScheduler;
 	import YTCore.Animators.Sequencer;
 	import YTCore.Events.YTEvent;
 	import YTCore.Interface.IRenderable;
@@ -16,6 +17,8 @@ package YTCore.Components
 	public class PointConnector extends Sprite implements IRenderable
 	{
 		private var canStep:Boolean = false;
+		
+		private var wipeFlag:Boolean = false;
 		
 		private var ptArr:Array;
 		private var col:uint;
@@ -36,6 +39,8 @@ package YTCore.Components
 		private var minitA:Number;
 		private var mendA:Number;
 		
+		private var segCount:int = 0; //Total number of micro segments that consists the curve
+		
 		private var widthArr:Array = [[.5,200]];
 		
 	
@@ -43,6 +48,9 @@ package YTCore.Components
 		private var segmentArr:Array = [];
 		
 		private var seq:Sequencer = new Sequencer();
+		private var wipeSeq:Sequencer = new Sequencer();
+		private var wipeSeqArr:Array = [];
+		private var wipeT:Number;
 		
 		/**
 		 * 
@@ -54,7 +62,7 @@ package YTCore.Components
 		 * @param   widthControlArr [[pct_of_lenght, width], [pct_of_length, width].....]
 		 * @param	dotted If the path is dotted
 		 */
-		public function PointConnector(pa:Array,cl:uint,time:Number,initWid:Number,endWid:Number=-1,widthControlArr:Array=null,doBleed:Boolean=false,bleedTime:Number=1,initA:Number=1,endA:Number=1,dotted:Boolean=false) 
+		public function PointConnector(pa:Array,cl:uint,time:Number,initWid:Number,endWid:Number=-1,widthControlArr:Array=null,doBleed:Boolean=false,bleedTime:Number=1,initA:Number=1,endA:Number=1,wipeTime:Number=2,dotted:Boolean=false) 
 		{
 			super();
 			
@@ -75,11 +83,13 @@ package YTCore.Components
 			mbleedTime = bleedTime;
 			minitA = initA;
 			mendA = endA;
+			wipeT = wipeTime;
 			
 			
 			extractLengthInfo();
 			
 			setup();
+			setupWipeRoutine();
 		}
 		
 		public function get POINTS():Array
@@ -105,6 +115,31 @@ package YTCore.Components
 			intervalLen = Helper.getIntervalLength(lengthArr);
 		}
 		
+		public function get totalAtomicSegment():int
+		{
+			return segCount;
+		}
+		
+		
+		public function setupWipeRoutine():void
+		{
+			var timePerUnitAtomicSegment:Number = wipeT / totalAtomicSegment;
+			var delayArr:Array = [];
+			var lastTimeStamp:Number = 0;
+			
+			for (var d:int = 0; d < segmentArr.length; d++ )
+			{
+				var dl:DLine = segmentArr[d];
+				var wipeTime:Number = dl.segmentCount * timePerUnitAtomicSegment;
+				var asch:ActionScheduler = new ActionScheduler(dl, "wipeFromHead", wipeTime);
+				var timingArr:Array = [asch, lastTimeStamp];
+				wipeSeqArr.push(timingArr);
+				lastTimeStamp += wipeTime;
+			}
+			wipeSeq.initSequence(wipeSeqArr);
+		}
+	
+		
 		
 		private function setup():void
 		{
@@ -115,7 +150,7 @@ package YTCore.Components
 			
 			
 			var thicknessIncrementPerLen:Number = (lwid - ewid) / totalPathLen;
-			var alphaIncrementPerLen:Number = (mendA-minitA)/totalPathLen;
+			var alphaIncrementPerLen:Number = (mendA-minitA)/totalPathLen;   
 			
 		
 			
@@ -150,6 +185,7 @@ package YTCore.Components
 				
 				segmentArr.push(dline);
 				addChild(dline);
+				segCount += dline.segmentCount;
 			}
 			
 		  
@@ -166,9 +202,7 @@ package YTCore.Components
 		    seq.initSequence(seqArr);
 			
 			
-			
-			
-			segmentArr[segmentArr.length - 1].addEventListener(YTEvent.FINISHED, onFin);
+		segmentArr[segmentArr.length - 1].addEventListener(YTEvent.FINISHED, onFin);
 		}
 		
 		private function onFin(e:YTEvent):void 
