@@ -132,8 +132,8 @@ package YTCore.Components
 			{
 				var dl:DLine = segmentArr[d];
 				var wipeTime:Number = dl.segmentCount * timePerUnitAtomicSegment;
-				var asch:ActionScheduler = new ActionScheduler(dl, "wipeFromHead", wipeTime);
-				var timingArr:Array = [asch, lastTimeStamp];
+				var asch:ActionScheduler = new ActionScheduler(dl, "wipeFromHead", lastTimeStamp);
+				var timingArr:Array = [asch, 0];
 				wipeSeqArr.push(timingArr);
 				lastTimeStamp += wipeTime;
 			}
