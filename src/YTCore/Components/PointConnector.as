@@ -51,6 +51,7 @@ package YTCore.Components
 		private var wipeSeq:Sequencer = new Sequencer();
 		private var wipeSeqArr:Array = [];
 		private var wipeT:Number;
+		private var wipeActive:Boolean = false;
 		
 		/**
 		 * 
@@ -214,13 +215,25 @@ package YTCore.Components
 		}
 		
 		
+		public function wipe():void
+		{
+			wipeActive = true;
+		}
+		
 		public function step():void
 		{
 			if (!canStep)
-			return;
+			{
+				if (!wipeActive)
+				return;
+				
+			   wipeSeq.step();
+			}
 			
 			seq.step();
 		}
+		
+		
 		
 		public function start():void
 		{

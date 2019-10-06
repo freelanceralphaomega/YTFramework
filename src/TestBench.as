@@ -101,7 +101,7 @@ package
 		//private var ptCon:PointConnector = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,160,3),600/720,500/1),0xCCCC00,3,100,0,[]);
 		//private var ptCon:DLine = new DLine(new Point(0, 0), new Point(400, 0), 0xCC0000, 2, 10, 10, true,1,0,1);
 		
-		private var ptCon = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,360*3,.4),600/720,200/1),0x660000,2,5,5,null)
+		//private var ptCon = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,360*3,.4),600/720,200/1),0x660000,2,5,5,null)
 		
 		//private var ptCon:DHair = new DHair();
 		
@@ -119,6 +119,9 @@ package
 		
 		//private var ptCon = new DLine(new Point(200, 200), new Point(1000, 200), 0x440000, 5, 10, 50, true, 1,1,1,false,1);
 		//private var actSch:ActionScheduler = new ActionScheduler(ptCon, "wipeFromHead", 5); 
+		
+		private var ptCon = new PointConnector([new Point(0,0),new Point(400,0),new Point(400,-400),new Point(800,-400)], 0xCC0000, 3, 7, 7, null, false, 1, .2, 1, 4);
+		private var actSch:ActionScheduler = new ActionScheduler(ptCon, "wipe", 5); 
 		
 		//private var ptCon = new MultilineRunningText("tangled");
 		
@@ -190,8 +193,8 @@ package
 		
 			
 			
-			//seq.initSequence([[ptCon,0],[actSch,0]]);
-			seq.initSequence([[ptCon,0]]);
+			seq.initSequence([[ptCon,0],[actSch,0]]);
+			//seq.initSequence([[ptCon,0]]);
 			
 			stage.addEventListener(KeyboardEvent.KEY_DOWN, onKd);
 			
