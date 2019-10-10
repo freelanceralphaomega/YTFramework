@@ -101,7 +101,7 @@ package
 		//private var ptCon:PointConnector = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,160,3),600/720,500/1),0xCCCC00,3,100,0,[]);
 		//private var ptCon:DLine = new DLine(new Point(0, 0), new Point(400, 0), 0xCC0000, 2, 10, 10, true,1,0,1);
 		
-		private var ptCon = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,360*3,4),600/720,200/1),0x660000,2,5,5,null)
+		private var ptCon = new PointConnector(MathHandler.unitToPixelCoordinate(MathHandler.getSinPtArr(0,360*3,10),600/720,200/1),0x660000,2,5,5,null,false,1,.1,1,5)
 		
 		//private var ptCon:DHair = new DHair();
 		
@@ -130,7 +130,7 @@ package
 		
        // private var ptCon:GraphPaper = new GraphPaper();
 		
-		//private var ptCon:INTRO_GRAPH = new INTRO_GRAPH();
+		//private var ptCon:INTRO_GRAPH = new INTRO_GRAPH(); 
 		
 
 		
