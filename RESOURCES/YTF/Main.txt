@@ -1,0 +1,20 @@
+
+config
+[
+canvasWidth =1200;
+canvasHeight = 800;
+canvasColor = 0xABCDEF;  
+frameRate = 60;
+renderTime = 100;
+scaleMode= SHOW_ALL;NO_SCALE;
+scriptPath=E:/WorkCode/YouTubeProjects/Resources/MISSING_SQUARE/SCRIPTS/; 
+shapePath=E:/WorkCode/YouTubeProjects/Resources/SHAPES/;
+renderPath=D:/FREELANCER/DEMO/VID/;
+]
+
+include
+[
+SKETCH
+]
+
+

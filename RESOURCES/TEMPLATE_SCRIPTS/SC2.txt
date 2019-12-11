@@ -1,0 +1,6 @@
+$M = 5;
+
+$T=7;
+
+
+THIS IS FROM SC2: $M, $T

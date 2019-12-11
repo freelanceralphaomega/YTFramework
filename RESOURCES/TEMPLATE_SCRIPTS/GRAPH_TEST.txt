@@ -1,0 +1,24 @@
+
+CONTEXT:GRAPH
+[
+
+dispatch:;
+id:c0;
+listen:;
+exe:(5,a0);
+properties:(x:0);
+
+
+<act: a0>
+move: 0,500;
+width:500;
+height:500;
+ppx:500/10;
+ppy:500/10;
+drawTime:4;
+boundingBoxCol:0x880000;
+mainDivCol:0xCC0000;
+<end:true>
+
+
+]

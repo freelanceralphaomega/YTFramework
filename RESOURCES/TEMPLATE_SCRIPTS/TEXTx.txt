@@ -1,0 +1,43 @@
+
+$t=0;
+
+context:TEXT
+[
+
+dispatch:;
+id:ptcon1;
+listen:;
+exe:($t,A0);
+properties:(x,500),(y,500),(alpha,1),(rotation,0);
+
+#animation: (property:x,time:4,initVal:0,finalVal:500,delay:5,fn:linear,params:1|0);#
+
+#animation: (property:rotation,time:5,initVal:0,finalVal:360,delay:0,fn:linear,params:1|0);#
+
+
+<act: A0>
+
+move: 0,0;
+
+COLORS: (0xFF0000),(0xFF0000),(0xFF0000),(0x00CC00);
+
+text:THIS IS A TEXT;
+
+font:AR BONNIE;
+time: 1000;
+size:60;
+
+isbitmap:true;
+
+wavescale:.5;	
+
+#---------------------------------STYLE MUST BE DECLARED AT THE END-----------------------------------#
+style:DTEXT;
+
+<end:true>
+
+
+
+
+
+]

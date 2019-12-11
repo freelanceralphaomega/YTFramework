@@ -1,0 +1,71 @@
+
+$t=0;
+
+context:ptconnect
+[
+
+dispatch:;
+id:ptcon1;
+listen:;
+exe:($t,A0),($t+.2,A1);
+
+
+<act: A0>
+
+move: 200,200;
+
+ptarr:
+	(0,0),
+	(100,100),
+	(250,100),
+	(250,400);
+	
+	
+col:                       0x0000CC;
+time:           1;
+th1:           10;
+th2:10;
+
+ctrl:;
+bl:             false;
+bt:2;
+alpha1:              1;
+alpha2:1;
+
+dotted:            false;
+
+
+<end:true>
+
+
+<act: A1>
+
+move: 200,200;
+
+ptarr:
+	(0,0),
+	(100,100),
+	(250,100),
+	(250,400);
+	
+	
+col:                       0xEE0000;
+time:           1;
+th1:           10;
+th2:10;
+
+ctrl:;
+bl:             false;
+bt:2;
+alpha1:              1;
+alpha2:1;
+
+dotted:            false;
+
+
+<end:true>
+
+
+
+
+]
