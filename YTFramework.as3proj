@@ -4,15 +4,14 @@
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="bin\YTFramework.swf" />
-    <movie fps="60" />
-    <movie width="1920" />
-    <movie height="1080" />
-    <movie version="27" />
+    <movie path="bin\NewProject.swf" />
+    <movie fps="30" />
+    <movie width="800" />
+    <movie height="600" />
+    <movie version="26" />
     <movie minorVersion="0" />
     <movie platform="AIR" />
     <movie background="#FFFFFF" />
-    <movie preferredSDK="AIR 29.0.0;29.0.0;" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
@@ -53,12 +52,11 @@
   </includeLibraries>
   <!-- SWC Libraries -->
   <libraryPaths>
-    <element path="src\Libs\spiderLib.swc" />
-    <element path="src\Libs\GraphicLib.swc" />
-    <element path="src\YTCore\Libs\spiderLib.swc" />
-    <element path="src\YTCore\Libs\GraphicLib.swc" />
-    <element path="src\YTCore\Libs\TextureLib.swc" />
     <element path="src\YTCore\Libs\EffectPresets.swc" />
+    <element path="src\YTCore\Libs\GraphicLib.swc" />
+    <element path="src\YTCore\Libs\MELib.swc" />
+    <element path="src\YTCore\Libs\spiderLib.swc" />
+    <element path="src\YTCore\Libs\TextureLib.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
@@ -91,8 +89,8 @@
   <!-- Other project options -->
   <options>
     <option showHiddenPaths="False" />
-    <option testMovie="Unknown" />
-    <option testMovieCommand="" />
+    <option testMovie="Custom" />
+    <option testMovieCommand="bat\RunApp.bat" />
   </options>
   <!-- Plugin storage -->
   <storage />
