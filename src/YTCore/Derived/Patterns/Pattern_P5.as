@@ -18,12 +18,12 @@ package YTCore.Derived.Patterns
 	 */
 	
 	 
-	public class Pattern_P4 extends Sprite implements IRenderable
+	public class Pattern_P5 extends Sprite implements IRenderable
 	{
 	 private var canStep:Boolean = false;
 	 private var seq:Sequencer = new Sequencer();
 	 
-		public function Pattern_P4() 
+		public function Pattern_P5() 
 		{
 			super();
 			

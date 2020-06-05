@@ -6,6 +6,7 @@ package TestBenches
 	import YTCore.Derived.Patterns.Pattern_P2;
 	import YTCore.Derived.Patterns.Pattern_P3;
 	import YTCore.Derived.Patterns.Pattern_P4;
+	import YTCore.Derived.Patterns.Pattern_P5;
 	import YTCore.Utils.Global;
 	import YTCore.Utils.Misc.Tester;
 	import flash.display.Sprite;
@@ -30,7 +31,7 @@ package TestBenches
 		
 		
 		
-		private var ptCon = new Pattern_P4();
+		private var ptCon = new Pattern_P5();
 		
 		
 
