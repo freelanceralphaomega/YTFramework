@@ -31,7 +31,7 @@ package YTCore.Derived.Patterns
 			var animArr:Array = [];
 			var colArr:Array = [0x0444bf,0x0584f2,0xedf259,0x0aaff1];
 	        var color:uint;
-			var maxseg:int = 150;
+			var maxseg:int = 15;
 			var maxAng:Number = 240;
 			for (var d:int = 0; d <= maxseg; d++ )
 			{

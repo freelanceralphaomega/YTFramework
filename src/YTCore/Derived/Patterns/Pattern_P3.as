@@ -36,12 +36,12 @@ package YTCore.Derived.Patterns
 			var animArr:Array = [];
 			var colArr:Array = [0x210040,0x420080,0x8400FF,0x7700E6,0x6400C2];
 	        var color:uint;
-			var maxseg:int = 1;
+			var maxseg:int = 0;
 			var maxAng:Number = 360;
 			for (var d:int = 0; d <= maxseg; d++ )
 			{
 				
-			 color = colArr[0];
+			 color = colArr[d];
 			 
 			 if (d > maxseg / colArr.length)
 			 color = colArr[1];
@@ -56,17 +56,17 @@ package YTCore.Derived.Patterns
 			 color = colArr[4]; 
 			
 				
-			var sinArr:Array = Helper.getArrayFromStringEquivalent(FileLoader.readShape("GIRL"));
-			var ptCon:LineDrawing = new LineDrawing(sinArr, 2, true, color,100);
+			var sinArr:Array = Helper.getArrayFromStringEquivalent(FileLoader.readShape("MERILYN_a"));
+			var ptCon:LineDrawing = new LineDrawing(sinArr, 2, !true, color,2);
 			//ptCon.rotation = -d * (maxAng / maxseg);
-			ptCon.scaleX = ptCon.scaleY = 1-(1 / maxseg) * d;
-			ptCon.alpha = .2+(1 / maxseg) * d;
+			//ptCon.scaleX = ptCon.scaleY = 1-(1 / maxseg) * d;
+			//ptCon.alpha = .2+(1 / maxseg) * d;
 			//ptCon.x = d * 20;
 			//ptCon.x = d * 20;
 			//ptCon.scaleX = d * 1.01;
 			//ptCon.alpha = 1-d * (1 / 20);
-			ptCon.x = 1920/2;
-			ptCon.y = 1080/2; 
+			//ptCon.x = 1920/2;
+			//ptCon.y = 1080/2; 
 			addChild(ptCon);
 			
 				animArr.push([ptCon, 1.5+2*Math.random()]); 

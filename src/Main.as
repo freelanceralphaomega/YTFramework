@@ -2,6 +2,8 @@
 {
 	//import Components.DLine;
 	import TestBenches.TestBench_1;
+	import TestBenches.TestBench_2;
+	import TestBenches.TestBench_3;
 	import TestBenches.TestBench_waveTxt;
 	import YTCore.Components.DLine;
 	import YTCore.Components.DTriangle;
@@ -28,7 +30,7 @@
 	 [SWF(frameRate="60", backgroundColor="0xffffff")]
 	public class Main extends Sprite 
 	{
-		private var t:TestBench;
+		private var t:TestBench_3;
 		private var rController:RenderController;
 		private var rendCanv:RenderCanvas;
 	
@@ -47,7 +49,7 @@
 			
 			ConfigManager.setConf();
 			
-			t = new TestBench();
+			t = new TestBench_3();
 			
 			stage.scaleMode = StageScaleMode[Global.SCALE_MODE];
             stage.align     = StageAlign.TOP_LEFT; 

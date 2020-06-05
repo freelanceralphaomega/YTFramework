@@ -5,6 +5,7 @@ package TestBenches
 	import YTCore.Derived.Patterns.Pattern_P1;
 	import YTCore.Derived.Patterns.Pattern_P2;
 	import YTCore.Derived.Patterns.Pattern_P3;
+	import YTCore.Derived.Patterns.Pattern_P4;
 	import YTCore.Utils.Global;
 	import YTCore.Utils.Misc.Tester;
 	import flash.display.Sprite;
@@ -19,7 +20,7 @@ package TestBenches
 	 * ...
 	 * @author Sushil Mandi
 	 */
-	public class TestBench_2 extends Sprite 
+	public class TestBench_3 extends Sprite 
 	{
 		
 		private var seq:Sequencer = new Sequencer();
@@ -29,12 +30,12 @@ package TestBenches
 		
 		
 		
-		private var ptCon = new Pattern_P3();
+		private var ptCon = new Pattern_P4();
 		
 		
 
 		
-		public function TestBench_2()
+		public function TestBench_3()
 		{
 			super();
 			
