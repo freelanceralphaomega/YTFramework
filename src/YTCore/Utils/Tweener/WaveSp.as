@@ -3,12 +3,14 @@ package YTCore.Utils.Tweener
 	import YTCore.Events.YTEvent;
 	import YTCore.Utils.Global;
 	import flash.events.EventDispatcher;
+	import flash.utils.Dictionary;
 	/**
 	 * ...
 	 * @author Sushil Mandi
 	 */
 	public class WaveSp extends EventDispatcher
 	{
+		private var dict:Dictionary = new Dictionary();
 		private var arr:Array;
 		private var offs:Number;
 		private var frameCount:int = 1;
@@ -30,9 +32,18 @@ package YTCore.Utils.Tweener
 			waveScaling = waveScale;
 			for (var d:int = 0; d < txtArr.length; d++)
 			{
-				//txtArr[d].y += Math.sin(phase * d)*offSet; 
+				dict[txtArr[d]] = txtArr[d].y; 
 			}
 			totoalFrame = frate * time;
+		}
+		
+		
+		private function restoreOriginalPosition():void
+		{
+			for (var d:int = 0; d < arr.length; d++ )
+			{
+				arr[d].y=dict[arr[d]];
+			}
 		}
 		
 		public function step():void
@@ -45,6 +56,7 @@ package YTCore.Utils.Tweener
 			if (frameCount >= totoalFrame)
 			{
 			isCompleted = true;
+			restoreOriginalPosition();
 			this.dispatchEvent(new YTEvent(YTEvent.FINISHED));
 			return;
 			}

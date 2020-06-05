@@ -1,6 +1,8 @@
 ﻿package
 {
 	//import Components.DLine;
+	import TestBenches.TestBench_1;
+	import TestBenches.TestBench_waveTxt;
 	import YTCore.Components.DLine;
 	import YTCore.Components.DTriangle;
 	import YTCore.Components.PolygonShape;
@@ -45,7 +47,7 @@
 			
 			ConfigManager.setConf();
 			
-			t= new TestBench();
+			t = new TestBench();
 			
 			stage.scaleMode = StageScaleMode[Global.SCALE_MODE];
             stage.align     = StageAlign.TOP_LEFT; 

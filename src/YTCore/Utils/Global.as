@@ -17,9 +17,9 @@ package YTCore.Utils
 		
 		public static var RENDER_PATH:String = "E:/YTRendered/";
 		
-		public static var CANVAS_COLOR:uint = 0x000000;
-		public static var RENDER_STAGE_WIDTH:Number = 300;
-		public static var RENDER_STAGE_HEIGHT:Number = 80;
+		public static var CANVAS_COLOR:uint = 0xABCDEF;
+		public static var RENDER_STAGE_WIDTH:Number = 500;
+		public static var RENDER_STAGE_HEIGHT:Number = 1600;
 		public static var RENDER_TIME:Number = 10;
 		public static var SCALE_MODE:String = "SHOW_ALL";
 		

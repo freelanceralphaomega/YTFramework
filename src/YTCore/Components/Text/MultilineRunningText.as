@@ -34,15 +34,16 @@ package YTCore.Components.Text
 		private function setup(tname:String):void
 		{
 			var txt:String = FileLoader.readMLText(tname);
+			trace(txt);
 			tlineArr = txt.split("\r\n");
 			
 			for (var d:int = 0; d < tlineArr.length; d++)
 			{
 				//var rt:RunningText = new RunningText(tlineArr[d], "Arial", 20, [colArr[d % colArr.length]], tlineArr[d].length * .11);
 				//var rt:RunningText = new RunningText(tlineArr[d], "Tunga", 25,[getCol(d)], tlineArr[d].length*.11);
-				var rt:RunningText = new RunningText(tlineArr[d], "_sans", 20,[0xCCCCCC], tlineArr[d].length*.11);
+				var rt:RunningText = new RunningText(tlineArr[d], "AR DECODE", 90,[0xFFFFFF], tlineArr[d].length*.11,false);
 				rtArr.push(rt);
-				rt.y = d * 25;
+				rt.y = d * 35;
 				addChild(rt);
 			}
 			
@@ -52,6 +53,8 @@ package YTCore.Components.Text
 		
 		private function getCol(d:int):uint
 		{
+			return 0xFFFFFF;
+			
 			if (d < tlineArr.length / 3)
 			return colArr[0];
 			if (d < 2 * tlineArr.length / 3-1) 

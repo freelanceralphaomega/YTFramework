@@ -7,9 +7,9 @@ canvasColor = 0xABCDEF;
 frameRate = 60;
 renderTime = 100;
 scaleMode= SHOW_ALL;NO_SCALE;
-scriptPath=E:/WorkCode/YouTubeProjects/Resources/MISSING_SQUARE/SCRIPTS/; 
-shapePath=E:/WorkCode/YouTubeProjects/Resources/SHAPES/;
-renderPath=D:/FREELANCER/DEMO/VID/;
+scriptPath=D:/WorkCode/YouTubeProjects/Resources/MISSING_SQUARE/SCRIPTS/; 
+shapePath=D:/WorkCode/YouTubeProjects/Resources/SHAPES/;
+renderPath=E:/FREELANCER/DEMO/VID/;
 ]
 
 include
