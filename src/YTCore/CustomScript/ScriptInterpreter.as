@@ -141,7 +141,7 @@ package YTCore.CustomScript
 			var fn:String = obj.fn;
 			
 			var f:Function;
-			var f_inv:Function;
+			var f_inv:Function;  //inv
 			
 			switch(fn)
 			{
