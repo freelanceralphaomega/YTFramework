@@ -123,7 +123,15 @@
 					storageObject.currentPt = new Point(p[0],p[1]);
 						
 						break;
+					
+					
+					case "SCALEX":
+					storageObject.scaleX= Number(commandSequence[k][1]);
+						break;
 						
+						case "SCALEY":
+					storageObject.scaleY= Number(commandSequence[k][1]);
+						break;
 						
 					case "BORDER_WIDTH":
 					storageObject.bwidth= Number(commandSequence[k][1]);
@@ -198,6 +206,13 @@
 			addChild(l);
 			        if(storageObject.rotation)
 					l.rotation = Number(storageObject.rotation);
+					
+					if (storageObject.scaleX)
+					l.scaleX = Number(storageObject.scaleX);
+					
+					if (storageObject.scaleY)
+					l.scaleY = Number(storageObject.scaleY);
+					
 					dlArr.push(l);
 			
 			Helper.addBackToBackDependency(seq, dlArr);

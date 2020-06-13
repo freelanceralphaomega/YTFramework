@@ -30,7 +30,7 @@
 	 [SWF(frameRate="60", backgroundColor="0xffffff")]
 	public class Main extends Sprite 
 	{
-		private var t:TestBench_3;
+		private var t;;
 		private var rController:RenderController;
 		private var rendCanv:RenderCanvas;
 	

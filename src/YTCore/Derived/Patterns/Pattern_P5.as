@@ -47,6 +47,9 @@ package YTCore.Derived.Patterns
 				
 			//var sinArr:Array = Helper.getArrayFromStringEquivalent(FileLoader.readShape("MERILYN_a"));
 			var sinArr:Array = MathHandler.getSinPtArr(0, 645, 10);
+			if (!true)//d % 2 == 0)
+			var sinArr:Array = MathHandler.getCosPtArr(0, 645, 4);
+			//var sinArr:Array = MathHandler.getEllipsePtArr(0, 400, 3, 4, 5, 4);
 			sinArr = MathHandler.unitToPixelCoordinate(sinArr,300/645,(100)/1);
 			//var ptCon:LineDrawing = new LineDrawing(sinArr, 2, !true, color,2);
 			var ptCon:PointConnector = new PointConnector(sinArr, 0xFFFFFF, 4, 1, 1, [[.5, 1], [1, 1]], true, 1, 1, 0);
@@ -55,7 +58,7 @@ package YTCore.Derived.Patterns
 			ptCon.rotation = -d * (maxAng / maxseg);
 			//ptCon.scaleX = ptCon.scaleY = 1-(1 / maxseg) * d;
 			//ptCon.alpha = .2+(1 / maxseg) * d;
-			//ptCon.x = d * 20;
+			//ptCon.x = d * .1;
 			//ptCon.x = d * 20;
 			//ptCon.scaleX = d * 1.01;
 			//ptCon.alpha = 1-d * (1 / 20);
@@ -63,7 +66,7 @@ package YTCore.Derived.Patterns
 			//ptCon.y = 1080/2; 
 			addChild(ptCon);
 			
-				animArr.push([ptCon, 1.5+Math.random()]); 
+				animArr.push([ptCon, 1.5+Math.random()]);  
 			}
 		
 			

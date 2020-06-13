@@ -33,9 +33,9 @@ package YTCore.Derived.Circular
 			var colArr:Array = [0x00CC00,0x00DD00,0x00EE00,0xFFFFFF,0x00DD00,0x00EE00,0x00CC00,0x00DD00,0x00EE00,0xFFFFFF,0x00DD00,0x00EE00,0x00DD00,0x00EE00,0x00CC00,0x00DD00,0x00EE00,0xFFFFFF,0x00DD00,0x00EE00,,0x00DD00,0x00EE00,0xFFFFFF,0x00DD00,0x00EE00,0x00DD00,0x00EE00,0x00CC00,0x00DD00,0x00EE00,0xFFFFFF,0x00DD00,0x00EE00,0x00EE00,0x00CC00,0x00DD00,0x00EE00,0xFFFFFF,0x00DD00,0x00EE00];
 			var currentIndex:int = 0;
 			var togSw:int = 0;
-			for (var d:int = 1; d <= 22; d++)
+			for (var d:int = 1; d <= 40; d++)
 			{
-				var sc:DCircleSegment = new DCircleSegment(360, d * 80, colArr[d - 1],.2*d, d * 60, d % 2 == 0?1: -1);
+				var sc:DCircleSegment = new DCircleSegment(360,d*9, 0xFF0000,2*Math.random()+.5, 1.5, d % 2 == 0?1: -1);
 		        
 				
 				//sc.rotation = d * 60;

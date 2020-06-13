@@ -76,7 +76,7 @@ package YTCore.Utils.AnimText
 				currentTxtPos += tf.textWidth;
 				if (txa[d] == " ")
 				{
-				currentTxtPos += 40;
+				currentTxtPos += 10;
 				wordColIndex++;
 				if (wordColIndex == wordCol.length)
 				wordColIndex = 0;

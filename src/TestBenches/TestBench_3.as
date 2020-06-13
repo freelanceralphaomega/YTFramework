@@ -2,6 +2,9 @@ package TestBenches
 {
 
 	import YTCore.Components.Text.MultilineRunningText;
+	import YTCore.Components.Text.NaturalHW.HandWriting;
+	import YTCore.Derived.Circular.CIRC_1;
+	import YTCore.Derived.Circular.CIRC_2;
 	import YTCore.Derived.Patterns.Pattern_P1;
 	import YTCore.Derived.Patterns.Pattern_P2;
 	import YTCore.Derived.Patterns.Pattern_P3;
@@ -31,7 +34,7 @@ package TestBenches
 		
 		
 		
-		private var ptCon = new Pattern_P5();
+		private var ptCon = new HandWriting("abcdefghijklmnopqrstuvwxyz");
 		
 		
 
@@ -77,10 +80,10 @@ package TestBenches
 			
 			
 			
-			ptCon.scaleX = ptCon.scaleY = .4; 
+			ptCon.scaleX = ptCon.scaleY = .2; 
 			
-			ptCon.x = 200;
-			ptCon.y = 300;
+			ptCon.x = 20;
+			ptCon.y = 400;
 			
 
 			/*

@@ -71,6 +71,8 @@ package YTCore.Utils.FileManager
 			var f:File = new File();
 			f.nativePath = Global.TEXT_PATH + fname+".txt";
 			
+			trace(f.nativePath);
+			
 			var fs:FileStream = new FileStream();
 			fs.open(f, FileMode.READ);
 			

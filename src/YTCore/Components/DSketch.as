@@ -62,10 +62,12 @@ package YTCore.Components
 			
 			
 			
-			Helper.addBackToBackDependency(seq, [lDrawing, pchange]);
+			//Helper.addBackToBackDependency(seq, [lDrawing, pchange]);
+			
+			seq.initSequence([[lDrawing,0]]);
 			
 			
-             pchange.addEventListener(YTEvent.FINISHED, onFin);
+            lDrawing.addEventListener(YTEvent.FINISHED, onFin);
 			
 			
 		}

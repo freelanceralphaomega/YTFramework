@@ -41,7 +41,7 @@ package YTCore.Components.Text
 			{
 				//var rt:RunningText = new RunningText(tlineArr[d], "Arial", 20, [colArr[d % colArr.length]], tlineArr[d].length * .11);
 				//var rt:RunningText = new RunningText(tlineArr[d], "Tunga", 25,[getCol(d)], tlineArr[d].length*.11);
-				var rt:RunningText = new RunningText(tlineArr[d], "AR DECODE", 90,[0xFFFFFF], tlineArr[d].length*.11,false);
+				var rt:RunningText = new RunningText(tlineArr[d], "IMPACT", 30,[0xFFFFFF], tlineArr[d].length*.11,false);
 				rtArr.push(rt);
 				rt.y = d * 35;
 				addChild(rt);
