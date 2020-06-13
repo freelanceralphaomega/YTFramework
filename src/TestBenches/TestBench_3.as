@@ -34,7 +34,7 @@ package TestBenches
 		
 		
 		
-		private var ptCon = new HandWriting("abcdefghijklmnopqrstuvwxyz");
+		private var ptCon = new HandWriting("my name is sushil mandi");
 		
 		
 

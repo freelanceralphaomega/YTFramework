@@ -42,6 +42,11 @@ package YTCore.Components.Text.NaturalHW
 			var lArr:Array = str.split("");
 			for (var d:int = 0; d < lArr.length; d++) 
 			{
+				if (lArr[d] == " ")
+				{
+				lastDrawPos += 90;
+				continue;
+				}
 				var shapeArr:Array = Helper.getArrayFromStringEquivalent(FileLoader.readShape(lArr[d]));
 				
 				var boundRect:Array = Helper.getLineArtBoundingRectangle(shapeArr);
@@ -51,21 +56,21 @@ package YTCore.Components.Text.NaturalHW
 				
 				trace("shapewid: ",shapeWid,"ShapeHeight: ",shapeHei);
 				
-				var sk:DSketch = new DSketch(shapeArr, 0xFF0000, .5, [], [], [], false, 10);
+				var sk:DSketch = new DSketch(shapeArr, 0xFF0000,.2/Hinfo_Sushil[lArr[d]+"_relSpeed"], [], [], [], false,20);
 				
 				var spr:Sprite = new Sprite();
 				addChild(spr);
 				
-				Drawing.drawRectangle(spr, shapeHei, shapeWid,0,0,false,0xABCDEF,0,1,.6);
+				//Drawing.drawRectangle(spr, shapeHei, shapeWid,0,0,false,0xABCDEF,0,1,.4);
 				
 				spr.addChild(sk);
 
 	            sk.x =-boundRect[0].x;
 				sk.y =-boundRect[0].y;
 				
-				spr.x = lastDrawPos;
-				spr.y = -shapeHei;
-				lastDrawPos += shapeWid;
+				spr.x = lastDrawPos+Hinfo_Sushil[lArr[d]+"_horizontalDisplacement"];
+				spr.y = -shapeHei+Hinfo_Sushil[lArr[d]+"_verticalDisplacement"];
+				lastDrawPos += shapeWid+Hinfo_Sushil[lArr[d]+"_horizontalDisplacement"];
 				fontAr.push(sk);
 			//
 			}
