@@ -34,7 +34,7 @@ package TestBenches
 		
 		
 		
-		private var ptCon = new HandWriting("my name is sushil mandi");
+		private var ptCon = new HandWriting("Malkova #0xFF0000 loves #0xFFFFFF Minerva");
 		
 		
 
@@ -80,7 +80,7 @@ package TestBenches
 			
 			
 			
-			ptCon.scaleX = ptCon.scaleY = .2; 
+			ptCon.scaleX = ptCon.scaleY = .1; 
 			
 			ptCon.x = 20;
 			ptCon.y = 400;

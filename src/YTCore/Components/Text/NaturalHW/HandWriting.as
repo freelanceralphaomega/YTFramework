@@ -37,17 +37,49 @@ package YTCore.Components.Text.NaturalHW
 		
 		private function setup():void 
 		{
+			trace("1111111111111111111111111");
 			var lastDrawPos:Number = 0;
 			var fontAr:Array = [];
+		    var color:uint = 0xFFFFFF;
 			var lArr:Array = str.split("");
 			for (var d:int = 0; d < lArr.length; d++) 
 			{
-				if (lArr[d] == " ")
+				var alp:String = lArr[d];
+				if (alp == " ")
 				{
 				lastDrawPos += 90;
 				continue;
 				}
-				var shapeArr:Array = Helper.getArrayFromStringEquivalent(FileLoader.readShape(lArr[d]));
+				if (alp == "#")
+				{
+					if (lArr[d + 1] == "0")
+					{
+						if (lArr[d + 2] == "x")
+						{
+							var col:String = "0x";
+							for (var k:int = 3; k <= 8; k++)
+							{
+								col += lArr[d+k];
+							}
+							color = Number(col);
+						}
+					}
+					d += 9;
+					continue;
+				}
+				
+				
+				
+				if (alp.toLowerCase() != alp)
+				{
+					alp = alp.toLowerCase() + "1";
+				}
+				
+				
+				
+				
+				
+				var shapeArr:Array = Helper.getArrayFromStringEquivalent(FileLoader.readShape(alp));
 				
 				var boundRect:Array = Helper.getLineArtBoundingRectangle(shapeArr);
 				
@@ -56,7 +88,7 @@ package YTCore.Components.Text.NaturalHW
 				
 				trace("shapewid: ",shapeWid,"ShapeHeight: ",shapeHei);
 				
-				var sk:DSketch = new DSketch(shapeArr, 0xFF0000,.2/Hinfo_Sushil[lArr[d]+"_relSpeed"], [], [], [], false,20);
+				var sk:DSketch = new DSketch(shapeArr, color,.2/Hinfo_Sushil[alp+"_relSpeed"], [], [], [], false,10);
 				
 				var spr:Sprite = new Sprite();
 				addChild(spr);
@@ -68,9 +100,9 @@ package YTCore.Components.Text.NaturalHW
 	            sk.x =-boundRect[0].x;
 				sk.y =-boundRect[0].y;
 				
-				spr.x = lastDrawPos+Hinfo_Sushil[lArr[d]+"_horizontalDisplacement"];
-				spr.y = -shapeHei+Hinfo_Sushil[lArr[d]+"_verticalDisplacement"];
-				lastDrawPos += shapeWid+Hinfo_Sushil[lArr[d]+"_horizontalDisplacement"];
+				spr.x = lastDrawPos+Hinfo_Sushil[alp+"_horizontalDisplacement"];
+				spr.y = -shapeHei+Hinfo_Sushil[alp+"_verticalDisplacement"];
+				lastDrawPos += shapeWid+Hinfo_Sushil[alp+"_horizontalDisplacement"]+30;
 				fontAr.push(sk);
 			//
 			}
