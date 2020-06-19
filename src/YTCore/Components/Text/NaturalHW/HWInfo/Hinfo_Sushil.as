@@ -32,6 +32,34 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		public static const x_verticalDisplacement:Number = 0;
 		public static const y_verticalDisplacement:Number = 80;
 		public static const z_verticalDisplacement:Number = 0;
+		
+		
+		public static const a_scale = 1;
+		public static const b_scale = 1;
+		public static const c_scale = 1;
+		public static const d_scale = 1;
+		public static const e_scale = 1;
+		public static const f_scale = 1;
+		public static const g_scale = 1;;
+		public static const h_scale = 1;
+		public static const i_scale = 1;
+		public static const j_scale = 1;
+		public static const k_scale = 1;
+		public static const l_scale = 1;
+		public static const m_scale = 1;
+		public static const n_scale = 1;
+		public static const o_scale = 1;
+		public static const p_scale = 1;
+		public static const q_scale = 1;
+		public static const r_scale = 1;
+		public static const s_scale = 1;
+		public static const t_scale = 1;
+		public static const u_scale = 1;
+		public static const v_scale = 1;
+		public static const w_scale = 1;
+		public static const x_scale = 1;
+		public static const y_scale = 1;
+		public static const z_scale = 1;
 
 		
 		public static const a_horizontalDisplacement:Number = 0;
@@ -119,6 +147,32 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		public static const y1_verticalDisplacement:Number = 80;
 		public static const z1_verticalDisplacement:Number = 0;
 
+		public static const a1_scale:Number = 1;
+		public static const b1_scale:Number = 1;
+		public static const c1_scale:Number = 1;
+		public static const d1_scale:Number = 1;
+		public static const e1_scale:Number = 1;
+		public static const f1_scale:Number = 1;
+		public static const g1_scale:Number = 1;
+		public static const h1_scale:Number = 1;
+		public static const i1_scale:Number = 1;
+		public static const j1_scale:Number = 1;
+		public static const k1_scale:Number = 1;
+		public static const l1_scale:Number = 1;
+		public static const m1_scale:Number = 1;
+		public static const n1_scale:Number = 1;
+		public static const o1_scale:Number = 1;
+		public static const p1_scale:Number = 1;
+		public static const q1_scale:Number = 1;
+		public static const r1_scale:Number = 1;
+		public static const s1_scale:Number = 1;
+		public static const t1_scale:Number = 1;
+		public static const u1_scale:Number = 1;
+		public static const v1_scale:Number = 1;
+		public static const w1_scale:Number = 1;
+		public static const x1_scale:Number = 1;
+		public static const y1_scale:Number = 1;
+		public static const z1_scale:Number = 1;
 		
 		public static const a1_horizontalDisplacement:Number = 0;
 		public static const b1_horizontalDisplacement:Number = 0;
@@ -175,14 +229,179 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		public static const y1_relSpeed:Number = 1;
 		public static const z1_relSpeed:Number = 1.5;
 		
+		//--------------------Numeric-----------------------------------------------------------------------------
+		
+		
+		public static const N_0_verticalDisplacement:Number = 0;
+		public static const N_1_verticalDisplacement:Number = 0;
+		public static const N_2_verticalDisplacement:Number = 0;
+		public static const N_3_verticalDisplacement:Number = 0;
+		public static const N_4_verticalDisplacement:Number = 0;
+		public static const N_5_verticalDisplacement:Number = 0;
+		public static const N_6_verticalDisplacement:Number = 0;
+		public static const N_7_verticalDisplacement:Number = 0;
+		public static const N_8_verticalDisplacement:Number = 0;
+		public static const N_9_verticalDisplacement:Number = 0;
+		
+		public static const N_0_scale:Number=.6;
+		public static const N_1_scale:Number=.6;
+		public static const N_2_scale:Number=.6;
+		public static const N_3_scale:Number=.6;
+		public static const N_4_scale:Number=.6;
+		public static const N_5_scale:Number=.6;
+		public static const N_6_scale:Number=.6;
+		public static const N_7_scale:Number=.6;
+		public static const N_8_scale:Number=.6;
+		public static const N_9_scale:Number=.6;
+		
+		
+		public static const N_0_horizontalDisplacement:Number = 0;
+		public static const N_1_horizontalDisplacement:Number = 0;
+		public static const N_2_horizontalDisplacement:Number = 0;
+		public static const N_3_horizontalDisplacement:Number = 0;
+		public static const N_4_horizontalDisplacement:Number = 0;
+		public static const N_5_horizontalDisplacement:Number = 0;
+		public static const N_6_horizontalDisplacement:Number = 0;
+		public static const N_7_horizontalDisplacement:Number = 0;
+		public static const N_8_horizontalDisplacement:Number = 0;
+		public static const N_9_horizontalDisplacement:Number = 0;
 		
 		
 		
+		public static const N_0_relSpeed:Number = 1;
+		public static const N_1_relSpeed:Number = 1;
+		public static const N_2_relSpeed:Number = 1;
+		public static const N_3_relSpeed:Number = 1;
+		public static const N_4_relSpeed:Number = 1;
+		public static const N_5_relSpeed:Number = 5;
+		public static const N_6_relSpeed:Number = 1;
+		public static const N_7_relSpeed:Number = 1;
+		public static const N_8_relSpeed:Number = 5;
+		public static const N_9_relSpeed:Number = 5;
+		
+		//----------------------------------------------------------------------------------------------------------------
+		
+		//---------------------------------------------ALPHA NUMERIC-----------------------------------------------------
+		
+		public static const excl_verticalDisplacement:Number = 0;
+		public static const atr_verticalDisplacement:Number = 0;
+		public static const hash_verticalDisplacement:Number = 0;
+		public static const dollar_verticalDisplacement:Number = 0;
+		public static const pct_verticalDisplacement:Number = 0;
+		public static const star_verticalDisplacement:Number = 80;
+		public static const lparan_verticalDisplacement:Number = 140;
+		public static const rparan_verticalDisplacement:Number = 0;
+		public static const squote_verticalDisplacement:Number = 0;
+		public static const minus_verticalDisplacement:Number = 80;
+		public static const plus_verticalDisplacement:Number = 0;
+		public static const eql_verticalDisplacement:Number = 0;
+		public static const lcurly_verticalDisplacement:Number = 0;
+		public static const rcurly_verticalDisplacement:Number = 0;
+		public static const lbracket_verticalDisplacement:Number = 0;
+		public static const rbracket_verticalDisplacement:Number = 95;
+		public static const qmark_verticalDisplacement:Number = 95;
+		public static const langle_verticalDisplacement:Number = 0;
+		public static const rangle_verticalDisplacement:Number = 0;
+		public static const comma_verticalDisplacement:Number = 0;
+		public static const fontslash_verticalDisplacement:Number = 0;
+		public static const backslash_verticalDisplacement:Number = 0;
+		public static const dquote_verticalDisplacement:Number = 0;
+		public static const pipe_verticalDisplacement:Number = 0;
+		public static const semicolon_verticalDisplacement:Number = 80;
+	
+		
+		public static const excl_scale:Number = 1;
+		public static const atr_scale:Number = 1;
+		public static const hash_scale:Number = 1;
+		public static const dollar_scale:Number = 1;
+		public static const pct_scale:Number = 1;
+		public static const star_scale:Number = 1;
+		public static const lparan_scale:Number = 1;
+		public static const rparan_scale:Number = 1;
+		public static const squote_scale:Number = 1;
+		public static const minus_scale:Number = 1;
+		public static const plus_scale:Number = 1;
+		public static const eql_scale:Number = 1;
+		public static const lcurly_scale:Number = 1;
+		public static const rcurly_scale:Number = 1;
+		public static const lbracket_scale:Number = 1;
+		public static const rbracket_scale:Number = 1;
+		public static const qmark_scale:Number = 1;
+		public static const langle_scale:Number = 1;
+		public static const rangle_scale:Number = 1;
+		public static const comma_scale:Number = 1;
+		public static const fontslash_scale:Number = 1;
+		public static const backslash_scale:Number = 1;
+		public static const dquote_scale:Number = 1;
+		public static const pipe_scale:Number = 1;
+		public static const semicolon_scale:Number = 1;
+
+		
+		public static const excl_horizontalDisplacement:Number = 0;
+		public static const atr_horizontalDisplacement:Number = 0;
+		public static const hash_horizontalDisplacement:Number = 0;
+		public static const dollar_horizontalDisplacement:Number = 0;
+		public static const pct_horizontalDisplacement:Number = 0;
+		public static const star_horizontalDisplacement:Number = -30;
+		public static const lparan_horizontalDisplacement:Number = -30;
+		public static const rparan_horizontalDisplacement:Number = 0;
+		public static const squote_horizontalDisplacement:Number = 0;
+		public static const minus_horizontalDisplacement:Number = -60;
+		public static const plus_horizontalDisplacement:Number = 0;
+		public static const eql_horizontalDisplacement:Number = 0;
+		public static const lcurly_horizontalDisplacement:Number = 0;
+		public static const rcurly_horizontalDisplacement:Number = 0;
+		public static const lbracket_horizontalDisplacement:Number = 0;
+		public static const rbracket_horizontalDisplacement:Number = -30;
+		public static const qmark_horizontalDisplacement:Number = -20;
+		public static const langle_horizontalDisplacement:Number = 0;
+		public static const rangle_horizontalDisplacement:Number = 0;
+		public static const comma_horizontalDisplacement:Number = 0;
+		public static const fontslash_horizontalDisplacement:Number = 0;
+		public static const backslash_horizontalDisplacement:Number = 0;
+		public static const dquote_horizontalDisplacement:Number = 0;
+		public static const pipe_horizontalDisplacement:Number = 0;
+		public static const semicolon_horizontalDisplacement:Number = -50;
+	
+		
+		
+		public static const excl_relSpeed:Number = 1;
+		public static const atr_relSpeed:Number = 1;
+		public static const hash_relSpeed:Number = 1;
+		public static const dollar_relSpeed:Number = 1;
+		public static const pct_relSpeed:Number = 1;
+		public static const star_relSpeed:Number = 5;
+		public static const lparan_relSpeed:Number = 1;
+		public static const rparan_relSpeed:Number = 1;
+		public static const squote_relSpeed:Number = 5;
+		public static const minus_relSpeed:Number = 5;
+		public static const plus_relSpeed:Number = 3;
+		public static const eql_relSpeed:Number = 1;
+		public static const lcurly_relSpeed:Number = 1;
+		public static const rcurly_relSpeed:Number = 1;
+		public static const lbracket_relSpeed:Number = 1;
+		public static const rbracket_relSpeed:Number = 3;
+		public static const qmark_relSpeed:Number = 1;
+		public static const langle_relSpeed:Number = 3;
+		public static const rangle_relSpeed:Number = 1;
+		public static const comma_relSpeed:Number = 5;
+		public static const fontslash_relSpeed:Number = 1;
+		public static const backslash_relSpeed:Number = 2;
+		public static const dquote_relSpeed:Number = 1;
+		public static const pipe_relSpeed:Number = 1;
+		public static const semicolon_relSpeed:Number = 1;
+		
+		//-------------------------------------------------------------------------------------------------------------------
+		
+		//-----------------------------SPECIAL SYMBOLS-----------------------------------------------------------------------
+		
+		//--------------------------------------------------------------------------------------------------------------------
 		
 		public function Hinfo_Sushil() 
 		{
 			
 		}
+		
 		
 	}
 

@@ -3,6 +3,7 @@ package YTCore.Components.Text.NaturalHW
 	import YTCore.Animators.Sequencer;
 	import YTCore.Components.DSketch;
 	import YTCore.Components.PointConnector;
+	import YTCore.Components.Text.NaturalHW.HWInfo.CharacterInfo;
 	import YTCore.Components.Text.NaturalHW.HWInfo.Hinfo_Sushil;
 	import YTCore.Events.YTEvent;
 	import YTCore.Utils.FileManager.FileLoader;
@@ -76,7 +77,7 @@ package YTCore.Components.Text.NaturalHW
 				}
 				
 				
-				
+				alp = CharacterInfo.symbolName(alp);
 				
 				
 				var shapeArr:Array = Helper.getArrayFromStringEquivalent(FileLoader.readShape(alp));
@@ -86,23 +87,30 @@ package YTCore.Components.Text.NaturalHW
 				var shapeWid:Number = getWidth(boundRect);
 				var shapeHei:Number = getHeight(boundRect);
 				
-				trace("shapewid: ",shapeWid,"ShapeHeight: ",shapeHei);
+				trace("shapewid: ", shapeWid, "ShapeHeight: ", shapeHei);
 				
-				var sk:DSketch = new DSketch(shapeArr, color,.2/Hinfo_Sushil[alp+"_relSpeed"], [], [], [], false,20);
+				var scale:Number = Hinfo_Sushil[alp + "_scale"];
+				
+				var sk:DSketch = new DSketch(shapeArr, color,.2/Hinfo_Sushil[alp+"_relSpeed"], [], [], [], false,30/scale);
 				
 				var spr:Sprite = new Sprite();
 				addChild(spr);
 				
 				//Drawing.drawRectangle(spr, shapeHei, shapeWid,0,0,false,0xABCDEF,0,1,.4);
 				
+				
 				spr.addChild(sk);
+				
+				spr.scaleX = spr.scaleY = scale;
+				
 
 	            sk.x =-boundRect[0].x;
 				sk.y =-boundRect[0].y;
 				
-				spr.x = lastDrawPos+Hinfo_Sushil[alp+"_horizontalDisplacement"];
-				spr.y = -shapeHei+Hinfo_Sushil[alp+"_verticalDisplacement"];
-				lastDrawPos += shapeWid+Hinfo_Sushil[alp+"_horizontalDisplacement"]+20;
+				spr.x = (lastDrawPos+Hinfo_Sushil[alp+"_horizontalDisplacement"]);
+				spr.y = ( -shapeHei*scale + Hinfo_Sushil[alp + "_verticalDisplacement"]);
+				
+				lastDrawPos += (shapeWid*scale+Hinfo_Sushil[alp+"_horizontalDisplacement"]+20);
 				fontAr.push(sk);
 			//
 			}

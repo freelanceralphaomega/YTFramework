@@ -1,0 +1,5 @@
+<PhysicsProfile>
+  <Element name="backslash">
+    <ShapeInfo>[[[15,-1],[23.5,12.5],[32,27],[44.5,43],[57,61],[68.5,74],[81,89.5],[90.5,106],[101,122]]]</ShapeInfo>
+  </Element>
+</PhysicsProfile>

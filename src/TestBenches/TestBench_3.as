@@ -34,7 +34,7 @@ package TestBenches
 		
 		
 		
-		private var ptCon = new HandWriting("#0xAABB00 If you are #0xFF0000 stupid #0xAABB00 then dont talk");
+		private var ptCon = new HandWriting("#0xAABB00 What the fuck! @%"); 
 		
 		
 
