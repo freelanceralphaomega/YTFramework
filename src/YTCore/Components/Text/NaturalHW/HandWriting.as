@@ -88,7 +88,7 @@ package YTCore.Components.Text.NaturalHW
 				
 				trace("shapewid: ",shapeWid,"ShapeHeight: ",shapeHei);
 				
-				var sk:DSketch = new DSketch(shapeArr, color,.2/Hinfo_Sushil[alp+"_relSpeed"], [], [], [], false,10);
+				var sk:DSketch = new DSketch(shapeArr, color,.2/Hinfo_Sushil[alp+"_relSpeed"], [], [], [], false,20);
 				
 				var spr:Sprite = new Sprite();
 				addChild(spr);
@@ -102,7 +102,7 @@ package YTCore.Components.Text.NaturalHW
 				
 				spr.x = lastDrawPos+Hinfo_Sushil[alp+"_horizontalDisplacement"];
 				spr.y = -shapeHei+Hinfo_Sushil[alp+"_verticalDisplacement"];
-				lastDrawPos += shapeWid+Hinfo_Sushil[alp+"_horizontalDisplacement"]+30;
+				lastDrawPos += shapeWid+Hinfo_Sushil[alp+"_horizontalDisplacement"]+20;
 				fontAr.push(sk);
 			//
 			}
