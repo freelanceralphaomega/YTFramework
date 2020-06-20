@@ -91,6 +91,9 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 				case ";":
 					return "semicolon";
 					break;
+					case "^":
+					return "hat";
+					break;
 				case "0":
 					return "N_0";
 					break;

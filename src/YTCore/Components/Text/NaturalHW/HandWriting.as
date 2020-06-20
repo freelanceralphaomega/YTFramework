@@ -24,6 +24,8 @@ package YTCore.Components.Text.NaturalHW
 		private var seq:Sequencer = new Sequencer();
 		private var canStep:Boolean = false;
 		private var str:String;
+		private var lastDrawPos:Number = 0;
+		private var wid:Number=0;
 		
 		public function HandWriting(txt:String) 
 		{
@@ -38,8 +40,6 @@ package YTCore.Components.Text.NaturalHW
 		
 		private function setup():void 
 		{
-			trace("1111111111111111111111111");
-			var lastDrawPos:Number = 0;
 			var fontAr:Array = [];
 		    var color:uint = 0xFFFFFF;
 			var lArr:Array = str.split("");
@@ -63,10 +63,12 @@ package YTCore.Components.Text.NaturalHW
 								col += lArr[d+k];
 							}
 							color = Number(col);
+							
+							d += 9;
+					       continue;
 						}
 					}
-					d += 9;
-					continue;
+					
 				}
 				
 				
@@ -91,7 +93,7 @@ package YTCore.Components.Text.NaturalHW
 				
 				var scale:Number = Hinfo_Sushil[alp + "_scale"];
 				
-				var sk:DSketch = new DSketch(shapeArr, color,.2/Hinfo_Sushil[alp+"_relSpeed"], [], [], [], false,30/scale);
+				var sk:DSketch = new DSketch(shapeArr, color,.2/Hinfo_Sushil[alp+"_relSpeed"], [], [], [], false,20/scale);
 				
 				var spr:Sprite = new Sprite();
 				addChild(spr);
@@ -110,7 +112,10 @@ package YTCore.Components.Text.NaturalHW
 				spr.x = (lastDrawPos+Hinfo_Sushil[alp+"_horizontalDisplacement"]);
 				spr.y = ( -shapeHei*scale + Hinfo_Sushil[alp + "_verticalDisplacement"]);
 				
-				lastDrawPos += (shapeWid*scale+Hinfo_Sushil[alp+"_horizontalDisplacement"]+20);
+				lastDrawPos += (shapeWid * scale+Hinfo_Sushil[alp + "_horizontalDisplacement"] + Hinfo_Sushil[alp + "_rightPadding"] + 20);
+				
+				
+				
 				fontAr.push(sk);
 			//
 			}
@@ -118,6 +123,11 @@ package YTCore.Components.Text.NaturalHW
 			Helper.addBackToBackDependency(seq, fontAr);
 			
 			 fontAr[fontAr.length-1].addEventListener(YTEvent.FINISHED, onFin);
+		}
+		
+		public override function get width():Number
+		{
+			return lastDrawPos*scaleX; 
 		}
 		
 		
@@ -135,7 +145,7 @@ package YTCore.Components.Text.NaturalHW
 		
 		private function onFin(e:Event):void 
 		{
-				this.dispatchEvent(new YTEvent(YTEvent.FINISHED));
+			this.dispatchEvent(new YTEvent(YTEvent.FINISHED));
 			stop();
 		}
 		

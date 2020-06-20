@@ -34,7 +34,7 @@ package TestBenches
 		
 		
 		
-		private var ptCon = new HandWriting("#0xAABB00 What the fuck! @%"); 
+		private var ptCon = new HandWriting("#0xabCDEF +++++++++++"); 
 		
 		
 
@@ -80,10 +80,12 @@ package TestBenches
 			
 			
 			
-			ptCon.scaleX = ptCon.scaleY = .1; 
+			ptCon.scaleX = ptCon.scaleY = .12; 
 			
 			ptCon.x = 20;
 			ptCon.y = 400;
+			
+			trace("++++++++++++++++++++++++++++++++++++++++++++++",ptCon.width);
 			
 
 			/*
