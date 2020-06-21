@@ -5,6 +5,7 @@ package YTCore.Components  {
 	import YTCore.Events.YTEvent;
 	import YTCore.Interface.IRenderable;
 	import YTCore.Utils.Global;
+	import com.flashSpider.Math.Geometry.SimpleGeometry;
 	import flash.display.DisplayObjectContainer;
 	import flash.geom.Point;
 	import flash.display.Sprite;
@@ -113,7 +114,8 @@ package YTCore.Components  {
 			if (!penL)
 			return;
 			
-			addChild(penL);
+			pt=SimpleGeometry.getTransformedCoordinate(pt, this, penL.parent);
+			
 			
 			penL.x = pt.x;
 			penL.y = pt.y;

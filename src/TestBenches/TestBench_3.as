@@ -34,7 +34,7 @@ package TestBenches
 		
 		
 		private var hand:Hand2 = new Hand2();
-		private var feather = new Feather7();
+		private var feather = new Feather4();
 		
 		
 		
@@ -47,9 +47,10 @@ package TestBenches
 		{
 			super();
 			
+			addChild(feather);
 			feather.scaleX = feather.scaleY = .4;
 			
-			ptCon= new HandWriting("#0x440000 [This is `nl:-100,300` What]??? #0x000000 `inf`#0x111100 eeds done" + 
+			ptCon= new HandWriting("#0x440000 [This is `sig` `nl:-100,300` What]??? #0x000000 `inf`#0x111100 eeds done" + 
 		
 		" #0x001100 `nl:-100,300` #0x000011 What is  wrong with you `nl:0,400` `int``int``sig`This is real shit",feather); 
 			

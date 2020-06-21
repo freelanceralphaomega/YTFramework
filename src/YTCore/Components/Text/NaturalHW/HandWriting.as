@@ -28,6 +28,7 @@ package YTCore.Components.Text.NaturalHW
 		private var wid:Number = 0;
 		
 		private var cursorY:Number = 0;
+		private var penScale:Number;
 		
 		private var penL:Sprite;
 		
@@ -37,7 +38,7 @@ package YTCore.Components.Text.NaturalHW
 			str = txt;
 			
 			penL = p;
-			
+			penScale = penL.scaleX;
 			
 			setup();
 		}
@@ -132,7 +133,7 @@ package YTCore.Components.Text.NaturalHW
 				
 				var scale:Number = Hinfo_Sushil[alp + "_scale"];
 				
-				var sk:DSketch = new DSketch(shapeArr, color,.2/Hinfo_Sushil[alp+"_relSpeed"], [], [], [], false,20/scale,penL);
+				var sk:DSketch = new DSketch(shapeArr, color,.5/Hinfo_Sushil[alp+"_relSpeed"], [], [], [], false,20/scale,penL);
 				//sk.pen = penL;
 				
 				
@@ -146,7 +147,6 @@ package YTCore.Components.Text.NaturalHW
 				spr.addChild(sk);
 				
 				spr.scaleX = spr.scaleY = scale;
-				
 
 	            sk.x =-boundRect[0].x;
 				sk.y =-boundRect[0].y;
@@ -171,19 +171,11 @@ package YTCore.Components.Text.NaturalHW
 		public override function set scaleX(scx:Number):void
 		{
 			super.scaleX = scx;
-			
-			penL.scaleX *= 1 / scx;
-			
-			
 		}
 		
 		public override function set scaleY(scy:Number):void
 		{
 			super.scaleY = scy;
-			
-			penL.scaleY *= 1 / scy;
-			
-			
 		}
 		
 		public function set pen(p:Sprite):void
