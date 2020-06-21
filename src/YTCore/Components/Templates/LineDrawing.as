@@ -27,6 +27,8 @@ package YTCore.Components.Templates
 		
 		private var seq:Sequencer = new Sequencer();
 		
+		private var penL:Sprite;
+		
 		
 		private var pointArr:Array;
 		
@@ -38,7 +40,7 @@ package YTCore.Components.Templates
 		 * @param   parallelDraw Start drawing all the segments simultaneously
 		 * @param	wid Width of the line
 		 */
-		public function LineDrawing(pts:Array,time:Number,parallelDraw:Boolean=false,col:uint=0xCCCCCC,wid:Number=3) 
+		public function LineDrawing(pts:Array,time:Number,parallelDraw:Boolean=false,col:uint=0xCCCCCC,wid:Number=3,p:Sprite=null) 
 		{
 			super();
 			
@@ -50,6 +52,12 @@ package YTCore.Components.Templates
 			
 			if (pts.length == 1)
 			isParallelDrawing = true;
+			
+			
+			
+			
+			penL = p;
+			
 			
 			timePerUnitLength = time / MathHandler.getDistanceOfLineArt(pts);
 			
@@ -68,7 +76,8 @@ package YTCore.Components.Templates
 			if (isParallelDrawing)
 			time = mtime;
 			
-			var ptCon:PointConnector = new PointConnector(ptArr, mcol,time, mwid);
+			var ptCon:PointConnector = new PointConnector(ptArr, mcol, time, mwid,-1,null,false,1,1,1,2,false,penL);
+			
 			addChild(ptCon);
 			curveArr.push(ptCon);
 		}
@@ -86,6 +95,8 @@ package YTCore.Components.Templates
 			
 		}
 		
+		
+		
 		private function onComp(e:YTEvent):void
 		{
 			this.dispatchEvent(new YTEvent(YTEvent.FINISHED));
@@ -97,6 +108,11 @@ package YTCore.Components.Templates
 			this.dispatchEvent(new YTEvent(YTEvent.FINISHED));
 		}
 		
+		
+		public function set pen(p:Sprite):void
+		{
+			penL = p;
+		}
 		
 		/* INTERFACE Interface.IRenderable */
 		

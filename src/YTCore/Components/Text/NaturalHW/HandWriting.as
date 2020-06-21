@@ -25,12 +25,19 @@ package YTCore.Components.Text.NaturalHW
 		private var canStep:Boolean = false;
 		private var str:String;
 		private var lastDrawPos:Number = 0;
-		private var wid:Number=0;
+		private var wid:Number = 0;
 		
-		public function HandWriting(txt:String) 
+		private var cursorY:Number = 0;
+		
+		private var penL:Sprite;
+		
+		public function HandWriting(txt:String,p:Sprite) 
 		{
 			super();
 			str = txt;
+			
+			penL = p;
+			
 			
 			setup();
 		}
@@ -51,6 +58,8 @@ package YTCore.Components.Text.NaturalHW
 				lastDrawPos += 90;
 				continue;
 				}
+				
+				//---------------------------------------------------------------------------------------------
 				if (alp == "#")
 				{
 					if (lArr[d + 1] == "0")
@@ -71,7 +80,37 @@ package YTCore.Components.Text.NaturalHW
 					
 				}
 				
+				if (alp == "`")
+				{
+					d++;
+					var sx:String = "";
+					
+					while (lArr[d] != "`")
+					{
+					  sx += lArr[d];
+					  d++;
+					}
+					
+					alp = sx;
+				}
 				
+				
+				
+		      if (alp.indexOf("nl:")>=0)
+			  {
+				  
+				  trace("++++++++++++++++++++++++++++++++++++++++++++++++++XX");
+				  
+				  var dpos:String = alp.split("nl:")[1];
+				  var pos:Array = dpos.split(",");
+				  
+				  lastDrawPos = Number(pos[0]);
+				  cursorY += Number(pos[1]);
+				  continue;
+			  }
+				
+				
+				//----------------------------------------------------------------------------------------------------------
 				
 				if (alp.toLowerCase() != alp)
 				{
@@ -93,7 +132,10 @@ package YTCore.Components.Text.NaturalHW
 				
 				var scale:Number = Hinfo_Sushil[alp + "_scale"];
 				
-				var sk:DSketch = new DSketch(shapeArr, color,.2/Hinfo_Sushil[alp+"_relSpeed"], [], [], [], false,20/scale);
+				var sk:DSketch = new DSketch(shapeArr, color,.2/Hinfo_Sushil[alp+"_relSpeed"], [], [], [], false,20/scale,penL);
+				//sk.pen = penL;
+				
+				
 				
 				var spr:Sprite = new Sprite();
 				addChild(spr);
@@ -110,7 +152,7 @@ package YTCore.Components.Text.NaturalHW
 				sk.y =-boundRect[0].y;
 				
 				spr.x = (lastDrawPos+Hinfo_Sushil[alp+"_horizontalDisplacement"]);
-				spr.y = ( -shapeHei*scale + Hinfo_Sushil[alp + "_verticalDisplacement"]);
+				spr.y = cursorY+( -shapeHei*scale + Hinfo_Sushil[alp + "_verticalDisplacement"]);
 				
 				lastDrawPos += (shapeWid * scale+Hinfo_Sushil[alp + "_horizontalDisplacement"] + Hinfo_Sushil[alp + "_rightPadding"] + 20);
 				
@@ -123,6 +165,30 @@ package YTCore.Components.Text.NaturalHW
 			Helper.addBackToBackDependency(seq, fontAr);
 			
 			 fontAr[fontAr.length-1].addEventListener(YTEvent.FINISHED, onFin);
+		}
+		
+		
+		public override function set scaleX(scx:Number):void
+		{
+			super.scaleX = scx;
+			
+			penL.scaleX *= 1 / scx;
+			
+			
+		}
+		
+		public override function set scaleY(scy:Number):void
+		{
+			super.scaleY = scy;
+			
+			penL.scaleY *= 1 / scy;
+			
+			
+		}
+		
+		public function set pen(p:Sprite):void
+		{
+			penL = p;
 		}
 		
 		public override function get width():Number

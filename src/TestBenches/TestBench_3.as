@@ -32,9 +32,11 @@ package TestBenches
 		
 		private var frameCount:int = 0;
 		
+		private var p:pen = new pen();
 		
 		
-		private var ptCon = new HandWriting("#0xabCDEF +++++++++++"); 
+		
+		private var ptCon:HandWriting; 
 		
 		
 
@@ -43,10 +45,15 @@ package TestBenches
 		{
 			super();
 			
+			p.scaleX = p.scaleY = .3;
+			
+			ptCon= new HandWriting("#0xabCDEF [This is `nl:-100,300` What]??? #0xFF0000 `inf`#0xFFFF00 eeds done" + 
+		
+		" #0xAA0044 `nl:-100,300` #0x00FF00 What is  wrong with you `nl:0,400` `int``int``sig`This is real shit",p); 
 			
 			if (Tester.enabled)
 			{
-				Tester.test();
+				Tester.test(); 
 				return;
 			}
 			
@@ -80,12 +87,12 @@ package TestBenches
 			
 			
 			
+			
 			ptCon.scaleX = ptCon.scaleY = .12; 
 			
 			ptCon.x = 20;
-			ptCon.y = 400;
+			ptCon.y = 100;
 			
-			trace("++++++++++++++++++++++++++++++++++++++++++++++",ptCon.width);
 			
 
 			/*

@@ -124,11 +124,24 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 								case "9":
 					return "N_9";
 					break;
+					
+					
+					case "sig":
+					return "sigma";
+					break;
+					case "int":
+					return "integration";
+					break;
+					case "inf":
+					return "infinity";
+					break;
 				
 				
 			}
 			return sym;
 		}
+		
+	
 		
 	}
 

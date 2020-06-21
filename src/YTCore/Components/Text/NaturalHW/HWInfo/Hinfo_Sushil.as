@@ -279,7 +279,7 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		public static const t1_relSpeed:Number = 5;
 		public static const u1_relSpeed:Number = 1;
 		public static const v1_relSpeed:Number = 2;
-		public static const w1_relSpeed:Number = 2;
+		public static const w1_relSpeed:Number = 4;
 		public static const x1_relSpeed:Number = 1;
 		public static const y1_relSpeed:Number = 1;
 		public static const z1_relSpeed:Number = 1.5;
@@ -363,9 +363,9 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		public static const eql_verticalDisplacement:Number =        0;
 		public static const lcurly_verticalDisplacement:Number =     0;
 		public static const rcurly_verticalDisplacement:Number =     0;
-		public static const lbracket_verticalDisplacement:Number =   0;
-		public static const rbracket_verticalDisplacement:Number =   95;
-		public static const qmark_verticalDisplacement:Number =      95;
+		public static const lbracket_verticalDisplacement:Number =   20;
+		public static const rbracket_verticalDisplacement:Number =   20;
+		public static const qmark_verticalDisplacement:Number =      0;
 		public static const langle_verticalDisplacement:Number =     0;
 		public static const rangle_verticalDisplacement:Number =     0;
 		public static const comma_verticalDisplacement:Number =      30;
@@ -375,7 +375,6 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		public static const pipe_verticalDisplacement:Number =       0;
 		public static const semicolon_verticalDisplacement:Number =  80;
 		public static const hat_verticalDisplacement:Number =        -100;
-	
 		
 		public static const excl_rightPadding:Number =   	 0;
 		public static const atr_rightPadding:Number =    	 0;
@@ -392,8 +391,8 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		public static const lcurly_rightPadding:Number =     0;
 		public static const rcurly_rightPadding:Number =     0;
 		public static const lbracket_rightPadding:Number =   0;
-		public static const rbracket_rightPadding:Number =   95;
-		public static const qmark_rightPadding:Number =      95;
+		public static const rbracket_rightPadding:Number =   0;
+		public static const qmark_rightPadding:Number =      0;
 		public static const langle_rightPadding:Number =     0;
 		public static const rangle_rightPadding:Number =     0;
 		public static const comma_rightPadding:Number =      0;
@@ -405,31 +404,31 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		public static const hat_rightPadding:Number =        -40;
 		
 		public static const excl_scale:Number =      1.2;
-		public static const atr_scale:Number =       .7;
-		public static const hash_scale:Number =      .7;
-		public static const dollar_scale:Number =    .7;
-		public static const pct_scale:Number =       .7;
-		public static const star_scale:Number =      .7;
-		public static const lparan_scale:Number =    .7;
-		public static const rparan_scale:Number =    .7;
-		public static const squote_scale:Number =    .7;
-		public static const minus_scale:Number =     .7;
-		public static const plus_scale:Number =      .7;
-		public static const eql_scale:Number =       .7;
-		public static const lcurly_scale:Number =    .7;
-		public static const rcurly_scale:Number =    .7;
-		public static const lbracket_scale:Number =  .7;
-		public static const rbracket_scale:Number =  .7;
-		public static const qmark_scale:Number =     .7;
-		public static const langle_scale:Number =    .7;
-		public static const rangle_scale:Number =    .7;
-		public static const comma_scale:Number =     .7;
-		public static const fontslash_scale:Number = .7;
-		public static const backslash_scale:Number = .7;
-		public static const dquote_scale:Number =    .7;
-		public static const pipe_scale:Number =      .7;
-		public static const semicolon_scale:Number = .7;
-		public static const hat_scale:Number =       .7;
+		public static const atr_scale:Number =       1;
+		public static const hash_scale:Number =      1;
+		public static const dollar_scale:Number =    1;
+		public static const pct_scale:Number =       1;
+		public static const star_scale:Number =      1;
+		public static const lparan_scale:Number =    1;
+		public static const rparan_scale:Number =    1;
+		public static const squote_scale:Number =    1;
+		public static const minus_scale:Number =     1;
+		public static const plus_scale:Number =      1;
+		public static const eql_scale:Number =       1;
+		public static const lcurly_scale:Number =    1;
+		public static const rcurly_scale:Number =    1;
+		public static const lbracket_scale:Number =  1;
+		public static const rbracket_scale:Number =  1;
+		public static const qmark_scale:Number =     1.2;
+		public static const langle_scale:Number =    1;
+		public static const rangle_scale:Number =    1;
+		public static const comma_scale:Number =     1;
+		public static const fontslash_scale:Number = 1;
+		public static const backslash_scale:Number = 1;
+		public static const dquote_scale:Number =    1;
+		public static const pipe_scale:Number =      1;
+		public static const semicolon_scale:Number = 1;
+		public static const hat_scale:Number =       1;
 
 		
 		public static const excl_horizontalDisplacement:Number =            0;
@@ -441,14 +440,14 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		public static const lparan_horizontalDisplacement:Number =          0;
 		public static const rparan_horizontalDisplacement:Number =          0;
 		public static const squote_horizontalDisplacement:Number =          0;
-		public static const minus_horizontalDisplacement:Number =           -60;
+		public static const minus_horizontalDisplacement:Number =           0;
 		public static const plus_horizontalDisplacement:Number =            0;
 		public static const eql_horizontalDisplacement:Number =             0;
 		public static const lcurly_horizontalDisplacement:Number =          0;
 		public static const rcurly_horizontalDisplacement:Number =          0;
 		public static const lbracket_horizontalDisplacement:Number=         0;
-		public static const rbracket_horizontalDisplacement:Number=         -30;
-		public static const qmark_horizontalDisplacement:Number =           -20;
+		public static const rbracket_horizontalDisplacement:Number=         0;
+		public static const qmark_horizontalDisplacement:Number =           20;
 		public static const langle_horizontalDisplacement:Number =          0;
 		public static const rangle_horizontalDisplacement:Number =          0;
 		public static const comma_horizontalDisplacement:Number =           0;
@@ -477,7 +476,7 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		public static const rcurly_relSpeed:Number = 1;
 		public static const lbracket_relSpeed:Number = 1;
 		public static const rbracket_relSpeed:Number = 3;
-		public static const qmark_relSpeed:Number = 1;
+		public static const qmark_relSpeed:Number = 4;
 		public static const langle_relSpeed:Number = 3;
 		public static const rangle_relSpeed:Number = 1;
 		public static const comma_relSpeed:Number = 5;
@@ -491,6 +490,34 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		//-------------------------------------------------------------------------------------------------------------------
 		
 		//-----------------------------SPECIAL SYMBOLS-----------------------------------------------------------------------
+		
+		
+		public static const sigma_verticalDisplacement:Number = 0;
+		public static const integration_verticalDisplacement:Number = 0;
+		public static const infinity_verticalDisplacement:Number = 0;
+		
+		public static const sigma_rightPadding:Number = 0;
+		public static const integration_rightPadding:Number = 0;
+		public static const infinity_rightPadding:Number = 0;
+
+		
+		public static const sigma_scale:Number=1.5;
+		public static const integration_scale:Number=.8;
+		public static const infinity_scale:Number=1.1;
+
+		
+		
+		public static const sigma_horizontalDisplacement:Number = 0;
+		public static const integration_horizontalDisplacement:Number = 0;
+		public static const infinity_horizontalDisplacement:Number = 0;
+
+		
+		
+		
+		public static const sigma_relSpeed:Number = 1;
+		public static const integration_relSpeed:Number = 3;
+		public static const infinity_relSpeed:Number = 1;
+
 		
 		//--------------------------------------------------------------------------------------------------------------------
 		

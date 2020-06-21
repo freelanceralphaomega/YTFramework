@@ -53,6 +53,8 @@ package YTCore.Components
 		private var wipeT:Number;
 		private var wipeActive:Boolean = false;
 		
+		private var penL:Sprite;
+		
 		/**
 		 * 
 		 * @param	pa Array of points defining the path
@@ -63,7 +65,7 @@ package YTCore.Components
 		 * @param   widthControlArr [[pct_of_lenght, width], [pct_of_length, width].....]
 		 * @param	dotted If the path is dotted
 		 */
-		public function PointConnector(pa:Array,cl:uint,time:Number,initWid:Number,endWid:Number=-1,widthControlArr:Array=null,doBleed:Boolean=false,bleedTime:Number=1,initA:Number=1,endA:Number=1,wipeTime:Number=2,dotted:Boolean=false) 
+		public function PointConnector(pa:Array,cl:uint,time:Number,initWid:Number,endWid:Number=-1,widthControlArr:Array=null,doBleed:Boolean=false,bleedTime:Number=1,initA:Number=1,endA:Number=1,wipeTime:Number=2,dotted:Boolean=false,p:Sprite=null) 
 		{
 			super();
 			
@@ -85,6 +87,7 @@ package YTCore.Components
 			minitA = initA;
 			mendA = endA;
 			wipeT = wipeTime;
+			penL = p;
 			
 			
 			extractLengthInfo();
@@ -139,6 +142,11 @@ package YTCore.Components
 			}
 			wipeSeq.initSequence(wipeSeqArr);
 		}
+		
+		public function set pen(p:Sprite):void
+		{
+			penL = p;
+		}
 	
 		
 		
@@ -178,7 +186,7 @@ package YTCore.Components
 				
 				currentTime+= cTime;
 				
-				var dline:DLine = new DLine(ptArr[d- 1], ptArr[d], col, cTime, lastWid, lastWid + dist * thicknessIncrementPerLen, mdoBleed, mbleedTime,lastAlpha,lastAlpha+dist*alphaIncrementPerLen,isDotted);
+				var dline:DLine = new DLine(ptArr[d- 1], ptArr[d], col, cTime, lastWid, lastWid + dist * thicknessIncrementPerLen, mdoBleed, mbleedTime,lastAlpha,lastAlpha+dist*alphaIncrementPerLen,isDotted,1,null,penL);
 				lastWid = lastWid + dist * thicknessIncrementPerLen;
 				lastAlpha = lastAlpha + dist * alphaIncrementPerLen;
 				

@@ -13,8 +13,9 @@ package YTCore.Components  {
 	public class DLine extends Sprite implements IRenderable
 	{
 
-		private var canDeconnectTail:Boolean = false;
-		private var canDeconnectHead:Boolean = false;
+	  private var penL:Sprite;
+	  private var canDeconnectTail:Boolean = false;
+	  private var canDeconnectHead:Boolean = false;
 	  private var currentHeadPosition:int = 0;
 	  private var currentTailPosition:int = 0;
 	  private var segmentArr:Array = [];
@@ -61,12 +62,15 @@ package YTCore.Components  {
 		  * @param  lwidEnd width of the line at the ending
           * @param	isDotted If the line is dotted
           */
-		public function DLine(from:Point,to:Point,col:uint,time:Number=5,lWid:Number=1,lwidEnd:Number=-1,doBleed:Boolean=false,bt:Number=1,initAlpha:Number=1,endAlpha:Number=1,isDotted:Boolean=false,wipeT:Number=1,texture:Sprite=null) {
+		public function DLine(from:Point,to:Point,col:uint,time:Number=5,lWid:Number=1,lwidEnd:Number=-1,doBleed:Boolean=false,bt:Number=1,initAlpha:Number=1,endAlpha:Number=1,isDotted:Boolean=false,wipeT:Number=1,texture:Sprite=null,p:Sprite=null) {
 			// constructor code
 			
 			mdoBleed = doBleed;
 			bTime = bt;
 			wtim = wipeT;
+			
+			penL = p;
+			
 			
 			addChild(textureSpr);
 			addChild(holderSpr);
@@ -80,6 +84,39 @@ package YTCore.Components  {
 			drawLine(from, to, col, time, lWid,lwidEnd, isDotted,initAlpha,endAlpha);
 			
 			wipeTime = wtim;
+		}
+		
+		
+		public function set pen(p:Sprite):void
+		{
+			trace("Pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp",p);
+			if (p == null)
+			{
+				if (penL)
+				{
+				  try
+				  {
+					removeChild(penL);  
+				  }catch (e:Error)
+				  {
+				  }
+				}
+				
+				return;
+			}
+			penL = p;
+			addChild(penL);
+		}
+		
+		public function movePen(pt:Point):void
+		{
+			if (!penL)
+			return;
+			
+			addChild(penL);
+			
+			penL.x = pt.x;
+			penL.y = pt.y;
 		}
 		
 		
@@ -229,6 +266,8 @@ package YTCore.Components  {
 			spr.graphics.moveTo(p1.x,p1.y);
 			spr.graphics.lineTo(p2.x, p2.y);          
 			}
+			
+			movePen(p1);
 		}
 		
 		private function updateWidth():void

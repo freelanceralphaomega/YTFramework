@@ -31,9 +31,11 @@ package YTCore.Components
 		private var pshape:PolygonShape;
 		private var pchange:PropertyChanger;
 		
+		private var penL:Sprite;
+		
 		private var seq:Sequencer = new Sequencer();
 		
-		public function DSketch(lineArtArr:Array,lineCol:uint,drawTime:Number,shapeColArr:Array,bodyAlphaArr:Array,textureArr:Array,drawParallel:Boolean=false,lineWid:Number=1) 
+		public function DSketch(lineArtArr:Array,lineCol:uint,drawTime:Number,shapeColArr:Array,bodyAlphaArr:Array,textureArr:Array,drawParallel:Boolean=false,lineWid:Number=1,p:Sprite=null) 
 		{
 			super();
 			
@@ -45,11 +47,14 @@ package YTCore.Components
 			mshapeColArr = shapeColArr;
 			mbodyAlphaArr = bodyAlphaArr;
 			mtextureArr = textureArr;
+			penL = p;
 			
 			
 			
+			lDrawing = new LineDrawing(lineArtArr, drawTime, drawParallel, lineCol, mlineWid,penL);
 			
-			lDrawing = new LineDrawing(lineArtArr, drawTime, drawParallel, lineCol,mlineWid);
+			
+			
 			pshape = new PolygonShape(lineArtArr, mshapeColArr, [], bodyAlphaArr, mtextureArr); 
 			
 			pshape.alpha = 0;
@@ -70,6 +75,11 @@ package YTCore.Components
             lDrawing.addEventListener(YTEvent.FINISHED, onFin);
 			
 			
+		}
+		
+		public function set pen(p:Sprite ):void
+		{
+			penL = p;
 		}
 		
 		private function onFin(e:YTEvent):void 
