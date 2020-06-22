@@ -1,0 +1,5 @@
+<PhysicsProfile>
+  <Element name="freelanceShape">
+    <ShapeInfo>[[[43.75,20],[100,555],[692.5,286.25],[548.75,23.75],[100,555]],[[43.75,20],[426.25,177.5],[692.5,286.25]]]</ShapeInfo>
+  </Element>
+</PhysicsProfile>

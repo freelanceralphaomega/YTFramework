@@ -28,7 +28,7 @@ package YTCore.Components.Text.NaturalHW
 		private var wid:Number = 0;
 		
 		private var cursorY:Number = 0;
-		private var penScale:Number;
+		
 		
 		private var penL:Sprite;
 		
@@ -38,7 +38,7 @@ package YTCore.Components.Text.NaturalHW
 			str = txt;
 			
 			penL = p;
-			penScale = penL.scaleX;
+			
 			
 			setup();
 		}

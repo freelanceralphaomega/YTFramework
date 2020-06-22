@@ -34,7 +34,7 @@ package TestBenches
 		
 		
 		private var hand:Hand2 = new Hand2();
-		private var feather = new Feather4();
+		private var feather = new Feather6();
 		
 		
 		
@@ -47,13 +47,15 @@ package TestBenches
 		{
 			super();
 			
-			addChild(feather);
-			feather.scaleX = feather.scaleY = .4;
 			
-			ptCon= new HandWriting("#0x440000 [This is `sig` `nl:-100,300` What]??? #0x000000 `inf`#0x111100 eeds done" + 
+			feather.scaleX = feather.scaleY = .6;
+			
+		//	ptCon= new HandWriting("#0x440000 [This is `sig` `nl:-100,300` What]??? #0x000000 `inf`#0x111100 eeds done" + 
 		
-		" #0x001100 `nl:-100,300` #0x000011 What is  wrong with you `nl:0,400` `int``int``sig`This is real shit",feather); 
+		//" #0x001100 `nl:-100,300` #0x000011 What is  wrong with you `nl:0,400` `int``int``sig`This is real shit",feather); 
 			
+		ptCon= new HandWriting("#0xFFFF00 This is something that is `nl:0,400` always going to #0xFF0000 bother me #0x0000FF `nl:0,400` `int` what a joke! ",feather);
+		
 			if (Tester.enabled)
 			{
 				Tester.test(); 
@@ -87,14 +89,14 @@ package TestBenches
 			removeEventListener(Event.ADDED_TO_STAGE, onStg); 
 			
 			addChild(ptCon);
+			addChild(feather);
 			
 			
 			
+			ptCon.scaleX = ptCon.scaleY = .2; 
 			
-			ptCon.scaleX = ptCon.scaleY = .12; 
-			
-			ptCon.x = 20;
-			ptCon.y = 100;
+			ptCon.x = 50;
+			ptCon.y = 200;
 			
 			
 

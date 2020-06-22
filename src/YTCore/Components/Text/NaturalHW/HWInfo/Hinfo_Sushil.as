@@ -495,21 +495,25 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		public static const sigma_verticalDisplacement:Number = 0;
 		public static const integration_verticalDisplacement:Number = 0;
 		public static const infinity_verticalDisplacement:Number = 0;
+		public static const fshape_verticalDisplacement:Number = 0;
 		
 		public static const sigma_rightPadding:Number = 0;
 		public static const integration_rightPadding:Number = 0;
 		public static const infinity_rightPadding:Number = 0;
+		public static const fshape_rightPadding:Number = 0;
 
 		
 		public static const sigma_scale:Number=1.5;
 		public static const integration_scale:Number=.8;
-		public static const infinity_scale:Number=1.1;
+		public static const infinity_scale:Number = 1.1;
+		public static const fshape_scale:Number=1.1;
 
 		
 		
 		public static const sigma_horizontalDisplacement:Number = 0;
 		public static const integration_horizontalDisplacement:Number = 0;
 		public static const infinity_horizontalDisplacement:Number = 0;
+		public static const fshape_horizontalDisplacement:Number = 0;
 
 		
 		
@@ -517,7 +521,7 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 		public static const sigma_relSpeed:Number = 1;
 		public static const integration_relSpeed:Number = 3;
 		public static const infinity_relSpeed:Number = 1;
-
+        public static const fshape_relSpeed:Number = .5;
 		
 		//--------------------------------------------------------------------------------------------------------------------
 		

@@ -135,7 +135,9 @@ package YTCore.Components.Text.NaturalHW.HWInfo
 					case "inf":
 					return "infinity";
 					break;
-				
+				    case "fs":
+					return "fshape";
+					break;
 				
 			}
 			return sym;
