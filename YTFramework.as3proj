@@ -57,6 +57,7 @@
     <element path="src\YTCore\Libs\MELib.swc" />
     <element path="src\YTCore\Libs\spiderLib.swc" />
     <element path="src\YTCore\Libs\TextureLib.swc" />
+    <element path="src\YTCore\Libs\External\Animations.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

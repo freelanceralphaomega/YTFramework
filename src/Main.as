@@ -1,6 +1,7 @@
 ﻿package
 {
 	//import Components.DLine;
+	import TestBenches.TB_4;
 	import TestBenches.TestBench_1;
 	import TestBenches.TestBench_2;
 	import TestBenches.TestBench_3;
@@ -49,7 +50,7 @@
 			
 			ConfigManager.setConf();
 			
-			t = new TestBench_3();
+			t = new TB_4();
 			
 			stage.scaleMode = StageScaleMode[Global.SCALE_MODE];
             stage.align     = StageAlign.TOP_LEFT; 

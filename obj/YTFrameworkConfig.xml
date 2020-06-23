@@ -39,6 +39,7 @@
       <path-element>D:\Development\FLASH\YTFramework\src\YTCore\Libs\MELib.swc</path-element>
       <path-element>D:\Development\FLASH\YTFramework\src\YTCore\Libs\spiderLib.swc</path-element>
       <path-element>D:\Development\FLASH\YTFramework\src\YTCore\Libs\TextureLib.swc</path-element>
+      <path-element>D:\Development\FLASH\YTFramework\src\YTCore\Libs\External\Animations.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>

@@ -14,7 +14,7 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'22-06-2020'</value>
+      <value>'23-06-2020'</value>
     </define>
     <define append="true">
       <name>CONFIG::air</name>
@@ -39,6 +39,7 @@
       <path-element>D:\Development\FLASH\YTFramework\src\YTCore\Libs\MELib.swc</path-element>
       <path-element>D:\Development\FLASH\YTFramework\src\YTCore\Libs\spiderLib.swc</path-element>
       <path-element>D:\Development\FLASH\YTFramework\src\YTCore\Libs\TextureLib.swc</path-element>
+      <path-element>D:\Development\FLASH\YTFramework\src\YTCore\Libs\External\Animations.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>
