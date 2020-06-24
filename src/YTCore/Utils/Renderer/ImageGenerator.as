@@ -65,7 +65,7 @@ package YTCore.Utils.Renderer
 		}
 		
 		//this should be called after a frame has been drawn and Context3D.present() has been called
-		public function renderToFile(dispObj:DisplayObject, context:Context3D=null ):void
+		public function renderToFile(dispObj:*, context:Context3D=null ):void
 		{
 			if (_inited)
 			{	
@@ -103,7 +103,8 @@ package YTCore.Utils.Renderer
 				support.finishQuadBatch();
 			*/	
 				if(context!=null)
-				context.drawToBitmapData( renderData );
+				dispObj.drawToBitmapData( renderData);
+				
 				else
 				{
 					renderData.draw(dispObj);

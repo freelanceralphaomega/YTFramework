@@ -24,12 +24,12 @@ package YTCore.Utils.Renderer
 		
 		private var mwid:Number;
 		private var mhei:Number;
-		private var mrenderOb:DisplayObject;
+		private var mrenderOb;
 		private var isShowing:Boolean = true;
 		private var cont:Context3D;
 		public var dispatcher:EventDispatcher = new EventDispatcher();
 		
-		public function RenderController(wid:Number,hei:Number,renderOb:DisplayObject) 
+		public function RenderController(wid:Number,hei:Number,renderOb:*) 
 		{
 			super();
 			

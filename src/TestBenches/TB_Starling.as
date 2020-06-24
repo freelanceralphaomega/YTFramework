@@ -92,7 +92,7 @@ package TestBenches
 			screenHeight = 1080;// stage.fullScreenHeight;
 			
 			
-			var viewPort:Rectangle=new Rectangle(0,0,screenWidth,screenHeight);
+			var viewPort:Rectangle=new Rectangle(0,0,Global.RENDER_STAGE_WIDTH,Global.RENDER_STAGE_HEIGHT);
 			
 			
 			//Set device properties
@@ -104,18 +104,17 @@ package TestBenches
 		//	myStarling=new Starling( Game, this.stage, viewPort, null, Context3DRenderMode.AUTO,
 			//	[ Context3DProfile.BASELINE_CONSTRAINED ] );
 			
-			myStarling.stage.stageWidth=768*(screenWidth/screenHeight);
-			myStarling.stage.stageHeight=768;
+			//myStarling.stage.stageWidth = viewPort.width;
+			//myStarling.stage.stageHeight = viewPort.height;
 			
 	
 	
 			myStarling.antiAliasing=4;
 			
-			myStarling.showStats = false;
+			myStarling.showStats = !false;
 			
 			//myStarling.showStatsAt("left", "top");
 			myStarling.start();
-			
 			
 			
 		}
@@ -150,6 +149,11 @@ package TestBenches
 	
 			//myStarling.addEventListener(Event.RENDER, step);
 			//StarlingBase.dispatcher.addEventListener("enterFrame",step);
+		}
+		
+		public function get starlingStage():starling.display.Stage
+		{
+			return myStarling.stage;
 		}
 		
 		private function onKd(e:KeyboardEvent):void 

@@ -23,7 +23,7 @@
 	 * @author Sushil Mandi
 	 */
 	
-	 [SWF(frameRate="60", backgroundColor="0xCCCCCC")]
+	 [SWF(frameRate="60", backgroundColor="0x008800")]
 	public class Main_starling extends Sprite 
 	{
 		private var rController:RenderController;
@@ -55,8 +55,8 @@
 			addChild(ms);
 
 			
-			stage.scaleMode = StageScaleMode[Global.SCALE_MODE];
-            stage.align     = StageAlign.TOP_LEFT; 
+			//stage.scaleMode = StageScaleMode[Global.SCALE_MODE];
+           //stage.align     = StageAlign.TOP_LEFT; 
 			
 			
 			
@@ -68,8 +68,8 @@
 			if (w < 500)
 			w = 500;
 			
-			//stage.nativeWindow.width = w;
-			//stage.nativeWindow.height =h;
+			stage.nativeWindow.width = w;
+			stage.nativeWindow.height =h;
 			
 		
 			
@@ -82,10 +82,11 @@
 			//rendCanv.x = 10;
 			//rendCanv.y = 10;
 			
-			//!Global.renderCanvas = rendCanv.RENDER_CANVAS;
+			//!Global.renderCanvas = rendCanv.RENDER_CANVAS; 
+			
 	
 			
-		rController = new RenderController(Global.RENDER_STAGE_WIDTH, Global.RENDER_STAGE_HEIGHT, Global.renderCanvas);
+		rController = new RenderController(Global.RENDER_STAGE_WIDTH, Global.RENDER_STAGE_HEIGHT, ms.starlingStage);
 			
 			Global.controller = rController;
 			

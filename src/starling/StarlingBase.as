@@ -33,20 +33,15 @@ package starling
 			
 			this.removeEventListener(Event.ADDED_TO_STAGE, onstg);
 			
-			var dl:DLine = new DLine(new Point(0, 0), new Point(600, 300),0xFF0000,5,100,2);
+			var dl:DLine = new DLine(new Point(0, 0), new Point(2800, 1300),0xFF0000,5,100,2);
 			addChild(dl);
 			
 			StarlingBase.t = dl;
 			
 			StarlingBase.dispatcher.dispatchEvent(new flash.events.Event("ready"));
 			
-			this.addEventListener(EnterFrameEvent.ENTER_FRAME, onFr);
 		}
 		
-		private function onFr(e:Event):void 
-		{
-			StarlingBase.dispatcher.dispatchEvent(new flash.events.Event("enterFrame"));
-		}
 		
 		
 	}

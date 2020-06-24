@@ -12,6 +12,7 @@ package starling
 	
 
 	
+	import YTCore.Utils.Global;
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
 	import flash.display.Stage;
@@ -29,7 +30,7 @@ package starling
 	public class MainStarling extends Sprite
 	{
 	
-		public static var myStarling:Starling;
+		private var myStarling:Starling;
 		
 		
 		private var screenWidth:int;
@@ -63,29 +64,31 @@ package starling
 			screenHeight = 1080;// stage.fullScreenHeight;
 			
 			
-			var viewPort:Rectangle=new Rectangle(0,0,screenWidth,screenHeight);
+			var viewPort:Rectangle=new Rectangle(0,0,Global.RENDER_STAGE_WIDTH,Global.RENDER_STAGE_HEIGHT);
 			
 			
 			//Set device properties
 			
 			Starling.handleLostContext=true;
 			
-			MainStarling.myStarling=new Starling(StarlingBase,stage,viewPort);
+			myStarling = new Starling(StarlingBase, stage, viewPort);
+		
+			
 			
 		//	myStarling=new Starling( Game, this.stage, viewPort, null, Context3DRenderMode.AUTO,
 			//	[ Context3DProfile.BASELINE_CONSTRAINED ] );
 			
-			MainStarling.myStarling.stage.stageWidth=768*(screenWidth/screenHeight);
-			MainStarling.myStarling.stage.stageHeight=768;
+			stage.width = viewPort.width;
+			stage.height = viewPort.height;
 			
 	
 	
-			MainStarling.myStarling.antiAliasing=4;
+			antiAliasing=4;
 			
-			MainStarling.myStarling.showStats = !false;
+			showStats = !false;
 			
 			//myStarling.showStatsAt("left", "top");
-			MainStarling.myStarling.start();
+			start();
 			
 		}
 	
