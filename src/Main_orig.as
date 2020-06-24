@@ -29,7 +29,7 @@
 	 */
 	
 	 [SWF(frameRate="60", backgroundColor="0xffffff")]
-	public class Main extends Sprite 
+	public class Main_orig extends Sprite 
 	{
 		private var t;;
 		private var rController:RenderController;
@@ -37,7 +37,7 @@
 	
 		
 		
-		public function Main() 
+		public function Main_orig() 
 		{
 			this.addEventListener(Event.ADDED_TO_STAGE, onStg);
 			

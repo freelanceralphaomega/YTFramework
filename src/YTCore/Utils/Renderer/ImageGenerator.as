@@ -3,6 +3,7 @@ package YTCore.Utils.Renderer
 	import YTCore.Utils.Global;
 	import flash.display.DisplayObject;
 	import flash.display.Sprite;
+	import starling.MainStarling;
 	
 	/*
 		Stage 3D to PNG by Dawson Valdes
@@ -25,6 +26,7 @@ package YTCore.Utils.Renderer
 		private var _fileIterator:int;
 		private var _fileName:String;
 		private var _outPutDirectory:File;
+	
 		
 		private var nPath:String = Global.RENDER_PATH;
 		
@@ -36,11 +38,12 @@ package YTCore.Utils.Renderer
 		
 		private var rootPath:String = "";
 		
-		public function ImageGenerator( width:int , height:int , useRGBA:Boolean = false )
+		public function ImageGenerator( width:int , height:int , useRGBA:Boolean)
 		{
 			_bitmapRect = new Rectangle( 0 , 0 , width , height );
 			_useRGBA = useRGBA;
 			_inited = false;
+
 		}
 		
 		public function initRenderToFile( outputFolder:String = "output" , fileName:String = "output" , compression:Boolean = false ):void

@@ -14,7 +14,7 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'23-06-2020'</value>
+      <value>'24-06-2020'</value>
     </define>
     <define append="true">
       <name>CONFIG::air</name>
@@ -43,7 +43,7 @@
     </library-path>
   </compiler>
   <file-specs>
-    <path-element>D:\Development\FLASH\YTFramework\src\Main.as</path-element>
+    <path-element>D:\Development\FLASH\YTFramework\src\Main_starling.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>30</default-frame-rate>

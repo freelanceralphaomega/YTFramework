@@ -1,6 +1,6 @@
 package YTCore.Events 
 {
-	import flash.events.Event;
+	import starling.events.Event;
 	
 	/**
 	 * ...

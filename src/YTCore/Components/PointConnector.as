@@ -6,8 +6,7 @@ package YTCore.Components
 	import YTCore.Events.YTEvent;
 	import YTCore.Interface.IRenderable;
 	import YTCore.Utils.Helper;
-	import flash.display.Sprite;
-	import flash.display3D.IndexBuffer3D;
+	import starling.display.Sprite;
 	import flash.geom.Point;
 	
 	/**

@@ -3,7 +3,7 @@ package YTCore.Animators
 	import YTCore.Interface.IRenderable;
 	import YTCore.Utils.Global;
 	import com.flashSpider.Graphics.Drawing;
-	import flash.display.Sprite;
+	import starling.display.Sprite;
 	import flash.geom.Point;
 	
 	/**
@@ -60,7 +60,7 @@ package YTCore.Animators
 			}
 			
 			try{
-			Drawing.drawLine(mspr, mfrom.x, mfrom.y, mto.x, mto.y, mcol, malp, currenThickness);
+			//!!Drawing.drawLine(mspr, mfrom.x, mfrom.y, mto.x, mto.y, mcol, malp, currenThickness);
 			}catch(e:Error){}
 			currenThickness += incrementPerFrame;
 			

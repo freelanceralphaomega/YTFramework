@@ -4,8 +4,12 @@ package YTCore.Utils.Renderer
 	import YTCore.Utils.Global;
 	import flash.display.DisplayObject;
 	import flash.display.Sprite;
+	import flash.display3D.Context3D;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	import starling.MainStarling;
+	import starling.core.Starling;
+	import starling.events.EventDispatcher;
 	
 	/**
 	 * ...
@@ -22,6 +26,8 @@ package YTCore.Utils.Renderer
 		private var mhei:Number;
 		private var mrenderOb:DisplayObject;
 		private var isShowing:Boolean = true;
+		private var cont:Context3D;
+		public var dispatcher:EventDispatcher = new EventDispatcher();
 		
 		public function RenderController(wid:Number,hei:Number,renderOb:DisplayObject) 
 		{
@@ -30,6 +36,7 @@ package YTCore.Utils.Renderer
 			mwid = wid;
 			mhei = hei;
 			mrenderOb = renderOb;
+	
 			
 			imGen = new ImageGenerator(mwid, mhei, true);
 			
@@ -67,9 +74,24 @@ package YTCore.Utils.Renderer
 			}
 		}
 		
+		public function get context():Context3D
+		{
+			return cont;
+		}
+		
+		public function set context(c:Context3D):void
+		{
+			cont = c;
+		}
+		
 		public function render():void
 		{
-			imGen.renderToFile(mrenderOb);
+			try{
+			imGen.renderToFile(mrenderOb, context);
+			}catch (e:Error)
+			{
+				trace(e.message);
+			}
 		}
 		
 		private function onR(e:MouseEvent):void 
@@ -78,7 +100,7 @@ package YTCore.Utils.Renderer
 			{
 				renderMode = false;
 				rCon.render.gotoAndStop(1);
-				this.dispatchEvent(new YTEvent(YTEvent.RENDER_STOP));
+				dispatcher.dispatchEvent(new YTEvent(YTEvent.RENDER_STOP));
 			}else
 			{
 				renderMode = true;
@@ -87,7 +109,7 @@ package YTCore.Utils.Renderer
 			imGen.initRenderToFile(rCon.loc.text, rCon.fname.text);
 			
 				
-				this.dispatchEvent(new YTEvent(YTEvent.RENDER_START));
+				dispatcher.dispatchEvent(new YTEvent(YTEvent.RENDER_START));
 			}
 		}
 		
@@ -102,12 +124,12 @@ package YTCore.Utils.Renderer
 			{
 				moviePlaying = false;
 				rCon.mov.gotoAndStop(1);
-				this.dispatchEvent(new YTEvent(YTEvent.MOVIE_STOP));
+				dispatcher.dispatchEvent(new YTEvent(YTEvent.MOVIE_STOP));
 			}else
 			{
 				moviePlaying = true;
 				rCon.mov.gotoAndStop(2);
-				this.dispatchEvent(new YTEvent(YTEvent.MOVIE_START));
+				dispatcher.dispatchEvent(new YTEvent(YTEvent.MOVIE_START));
 			}
 		}
 		

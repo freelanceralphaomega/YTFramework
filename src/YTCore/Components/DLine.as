@@ -6,10 +6,13 @@ package YTCore.Components  {
 	import YTCore.Interface.IRenderable;
 	import YTCore.Utils.Global;
 	import com.flashSpider.Math.Geometry.SimpleGeometry;
-	import flash.display.DisplayObjectContainer;
 	import flash.geom.Point;
-	import flash.display.Sprite;
 	import flash.events.Event;
+	import starling.display.Quad;
+	import starling.display.Shape;
+	
+	import starling.display.DisplayObjectContainer;
+	import starling.display.Sprite;
 	
 	public class DLine extends Sprite implements IRenderable
 	{
@@ -79,7 +82,7 @@ package YTCore.Components  {
 			if (texture)
 			{
 			textureSpr.addChild(texture);
-			textureSpr.mask = holderSpr;
+			//!textureSpr.mask = holderSpr;
 			}
 			
 			drawLine(from, to, col, time, lWid,lwidEnd, isDotted,initAlpha,endAlpha);
@@ -114,7 +117,7 @@ package YTCore.Components  {
 			if (!penL)
 			return;
 			
-			pt=SimpleGeometry.getTransformedCoordinate(pt, this, penL.parent);
+		//!!	pt=SimpleGeometry.getTransformedCoordinate(pt, this, penL.parent);
 			
 			
 			penL.x = pt.x;
@@ -249,7 +252,7 @@ package YTCore.Components  {
 		{
 			
 			
-			var spr:Sprite = new Sprite();
+			var spr:Shape = new Shape();
 			holderSpr.addChild(spr);
 			segmentArr.push(spr);
 			if (mdoBleed)
@@ -257,16 +260,16 @@ package YTCore.Components  {
 			
 			segmentSprites.push(spr);
 			
-			var ug:UniformGrowth = new UniformGrowth(spr, p1, p2, lineCol, 0, lWid, bTime,alp);
-			ug.start(); 
+//!!			var ug:UniformGrowth = new UniformGrowth(spr, p1, p2, lineCol, 0, lWid, bTime,alp);
+	//!!		ug.start(); 
 			
-			ugArr.push(ug);
+		//!!	ugArr.push(ug);
 			}
 			else
 			{
 			spr.graphics.lineStyle(lWid,lineCol,alp);
 			spr.graphics.moveTo(p1.x,p1.y);
-			spr.graphics.lineTo(p2.x, p2.y);          
+			spr.graphics.lineTo(p2.x, p2.y);     
 			}
 			
 			movePen(p1);
