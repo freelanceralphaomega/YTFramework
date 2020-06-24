@@ -5,9 +5,10 @@ package YTCore.Components.Templates
 	import YTCore.Components.PointConnector;
 	import YTCore.Events.YTEvent;
 	import YTCore.Utils.Helper;
-	import flash.display.Sprite;
 	import YTCore.Interface.IRenderable;
 	import flash.geom.Point;
+	
+	import starling.display.Sprite;
 	
 	/**
 	 * ...

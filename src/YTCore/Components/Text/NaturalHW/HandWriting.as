@@ -9,7 +9,7 @@ package YTCore.Components.Text.NaturalHW
 	import YTCore.Utils.FileManager.FileLoader;
 	import YTCore.Utils.Helper;
 	import com.flashSpider.Graphics.Drawing;
-	import flash.display.Sprite;
+	import starling.display.Sprite;
 	import YTCore.Interface.IRenderable;
 	import flash.events.Event;
 	import flash.geom.Rectangle;

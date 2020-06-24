@@ -7,7 +7,7 @@ package YTCore.Components
 	import YTCore.Components.Templates.LineDrawing;
 	import YTCore.Events.YTEvent;
 	import YTCore.Utils.Helper;
-	import flash.display.Sprite;
+	import starling.display.Sprite;
 	import YTCore.Interface.IRenderable;
 	
 	/**

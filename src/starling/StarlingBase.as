@@ -2,6 +2,10 @@ package starling
 {
 	
 	import YTCore.Components.DLine;
+	import YTCore.Components.PointConnector;
+	import YTCore.Components.PolygonShape;
+	import YTCore.Components.Templates.LineDrawing;
+	import YTCore.Components.Text.NaturalHW.HandWriting;
 	import flash.geom.Point;
 	import flash.utils.Dictionary;
 	import starling.display.Quad;
@@ -16,7 +20,7 @@ package starling
 	
 	public class StarlingBase extends Sprite
 	{
-		public static var t:DLine;
+		public static var t;
 		public static var dispatcher:EventDispatcher = new EventDispatcher();
 		public function StarlingBase()
 		{
@@ -33,7 +37,10 @@ package starling
 			
 			this.removeEventListener(Event.ADDED_TO_STAGE, onstg);
 			
-			var dl:DLine = new DLine(new Point(0, 0), new Point(2800, 1300),0xFF0000,5,100,2);
+			var dl = new HandWriting("This text is rendered in Starling!", null);
+			dl.x = 200;
+			dl.y = 300;
+			dl.scaleX = dl.scaleY = .3;
 			addChild(dl);
 			
 			StarlingBase.t = dl;

@@ -5,8 +5,9 @@ package YTCore.Components
 	import YTCore.Graphics.TextureLibrary;
 	import YTCore.Utils.Helper;
 	import com.flashSpider.Graphics.Drawing;
-	import flash.display.Sprite;
-	import flash.events.Event;
+	import starling.display.Shape;
+	import starling.display.Sprite;
+	import starling.events.Event;
 	
 	/**
 	 * ...
@@ -73,7 +74,7 @@ package YTCore.Components
 				mAlpha = malphaArr[d];
 				
 			if(Helper.getDistanceInitEnd(mpolygonArr[d])<=5)
-			Drawing.drawPolygon(tempSpr, false, mpolygonArr[d], mbCol, mAlpha, mlCol, 0);
+			drawPolygon(tempSpr, false, mpolygonArr[d], mbCol, mAlpha, mlCol, 0);
 			
 			if (mTextureArr[d])
 			{
@@ -85,6 +86,19 @@ package YTCore.Components
 			}
 		}
 		
+		private function drawPolygon(spr:Sprite,clearFirst:Boolean,polyArr:Array,fillCol:uint,fillAlpha:Number,lineCol:uint,lineAlpha:Number)
+		{
+			var shape:Shape = new Shape();
+			shape.graphics.lineStyle(1, lineCol, lineAlpha);
+			shape.graphics.moveTo(polyArr[0], polyArr[0]);
+			shape.graphics.beginFill(fillCol, fillAlpha);
+			for (var d:int = 1; d < polyArr.length; d++)
+			{
+				shape.graphics.lineTo(polyArr[d], polyArr[d]);
+			}
+			shape.graphics.endFill();
+			spr.addChild(shape);
+		}
 	}
 
 }

@@ -4,7 +4,7 @@ package YTCore.Animators
 	import YTCore.Events.YTEvent;
 	import YTCore.Interface.IRenderable;
 	import YTCore.Utils.Global;
-	import flash.events.EventDispatcher;
+	import starling.events.EventDispatcher;
 	
 	/**
 	 * ...
